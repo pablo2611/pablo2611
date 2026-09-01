@@ -11,7 +11,7 @@
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=202609011225" alt="Animated activity heatmap" width="100%" />
+  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1788283532271" alt="Animated activity heatmap" width="100%" />
 </div>
 
 <br />
