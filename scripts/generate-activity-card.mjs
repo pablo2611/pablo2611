@@ -51,3 +51,13 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" vi
   <text x="590" y="263" class="label">Less</text><g transform="translate(620 252)"><rect width="11" height="11" rx="2.5" fill="#ffffff12"/><rect x="15" width="11" height="11" rx="2.5" fill="#554c9c"/><rect x="30" width="11" height="11" rx="2.5" fill="#7468da"/><rect x="45" width="11" height="11" rx="2.5" fill="#9589ff"/><rect x="60" width="11" height="11" rx="2.5" fill="#c3bcff"/></g><text x="700" y="263" class="label">More</text>
 </svg>`;
 await writeFile(output, svg);
+
+// GitHub's image proxy can retain an older SVG at the same URL. Change only
+// the harmless query version in the README so each daily card is fetched anew.
+const readme = await readFile("README.md", "utf8");
+const version = new Date().toISOString().slice(0, 10).replaceAll("-", "");
+const nextReadme = readme.replace(
+  /(https:\/\/raw\.githubusercontent\.com\/pablo2611\/pablo2611\/main\/assets\/activity-heatmap\.svg)(?:\?v=\d+)?/,
+  `$1?v=${version}`,
+);
+if (nextReadme !== readme) await writeFile("README.md", nextReadme);
