@@ -26,7 +26,8 @@ for (let index = 0; index < weeks.length; index += 1) {
 const squares = weeks.flatMap((week, column) => week.contributionDays.map((day) => {
   const fill = levels[day.contributionLevel] ?? levels.NONE;
   const tooltip = `${day.contributionCount} contribution${day.contributionCount === 1 ? "" : "s"} on ${day.date}`;
-  return `<rect x="${x + column * step}" y="${y + day.weekday * step}" width="${cell}" height="${cell}" rx="2.5" fill="${fill}"><title>${escape(tooltip)}</title></rect>`;
+  const pulse = day.contributionLevel === "NONE" ? "" : `<animate attributeName="opacity" values="1;.5;1" begin="${((column + day.weekday) % 11) * .19}s" dur="2.7s" repeatCount="indefinite"/>`;
+  return `<rect x="${x + column * step}" y="${y + day.weekday * step}" width="${cell}" height="${cell}" rx="2.5" fill="${fill}"><title>${escape(tooltip)}</title>${pulse}</rect>`;
 })).join("");
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" role="img" aria-labelledby="title description">
   <title id="title">Contribution activity</title>
@@ -34,6 +35,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" vi
   <defs>
     <linearGradient id="surface" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#161326"/><stop offset="1" stop-color="#0d0e18"/></linearGradient>
     <radialGradient id="glow"><stop stop-color="#7c6cff" stop-opacity=".3"/><stop offset="1" stop-color="#7c6cff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sweep" x1="0" x2="1"><stop stop-color="#c3bcff" stop-opacity="0"/><stop offset=".5" stop-color="#c3bcff" stop-opacity=".22"/><stop offset="1" stop-color="#c3bcff" stop-opacity="0"/></linearGradient>
     <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
     <style>.label{fill:#918da9;font:10px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.small{fill:#918da9;font:11px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.strong{fill:#fff;font:700 16px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}</style>
   </defs>
@@ -48,6 +50,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" vi
   <text x="57" y="129" class="label">Mon</text><text x="57" y="155" class="label">Wed</text><text x="57" y="181" class="label">Fri</text>
   ${monthLabels.join("")}
   <g>${squares}</g>
+  <rect x="${x - 24}" y="${y - 4}" width="30" height="100" rx="15" fill="url(#sweep)" pointer-events="none"><animate attributeName="x" values="${x - 30};${x + weeks.length * step};${x + weeks.length * step}" dur="5.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.12;.34;1" dur="5.4s" repeatCount="indefinite"/></rect>
   <text x="590" y="263" class="label">Less</text><g transform="translate(620 252)"><rect width="11" height="11" rx="2.5" fill="#ffffff12"/><rect x="15" width="11" height="11" rx="2.5" fill="#554c9c"/><rect x="30" width="11" height="11" rx="2.5" fill="#7468da"/><rect x="45" width="11" height="11" rx="2.5" fill="#9589ff"/><rect x="60" width="11" height="11" rx="2.5" fill="#c3bcff"/></g><text x="700" y="263" class="label">More</text>
 </svg>`;
 await writeFile(output, svg);
@@ -55,7 +58,7 @@ await writeFile(output, svg);
 // GitHub's image proxy can retain an older SVG at the same URL. Change only
 // the harmless query version in the README so each daily card is fetched anew.
 const readme = await readFile("README.md", "utf8");
-const version = new Date().toISOString().slice(0, 10).replaceAll("-", "");
+const version = Date.now();
 const nextReadme = readme.replace(
   /(https:\/\/raw\.githubusercontent\.com\/pablo2611\/pablo2611\/main\/assets\/activity-heatmap\.svg)(?:\?v=\d+)?/,
   `$1?v=${version}`,
