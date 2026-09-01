@@ -22,12 +22,6 @@
 
 <br />
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/tech-cloud.svg" alt="Technology cloud" width="100%" />
-</div>
-
-<br />
-
 <table>
   <tr>
     <td width="50%" valign="top">
