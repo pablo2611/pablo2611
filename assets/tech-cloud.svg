@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-labelledby="title desc">
+  <title id="title">Technology cloud</title><desc id="desc">Animated visual cloud of Pablo Sánchez's languages, frameworks, cloud services, testing tools and developer tooling.</desc>
+  <defs>
+    <radialGradient id="bg"><stop stop-color="#211d42"/><stop offset="1" stop-color="#0d0e18"/></radialGradient>
+    <radialGradient id="core"><stop stop-color="#8f82ff" stop-opacity=".42"/><stop offset="1" stop-color="#7c6cff" stop-opacity="0"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <style>.tag{fill:#e8e6ff;font:600 11px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.2px}.sub{fill:#aaa6c2;font:11px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.head{fill:#fff;font:700 16px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}</style>
+  </defs>
+  <rect width="760" height="360" rx="22" fill="url(#bg)" stroke="#ffffff" stroke-opacity=".13"/>
+  <text x="30" y="42" class="head">Technology cloud</text><text x="30" y="61" class="sub">Languages, frameworks, cloud, testing, and developer tooling</text>
+  <circle cx="380" cy="205" r="144" fill="none" stroke="#7c6cff" stroke-opacity=".12" stroke-dasharray="3 9"><animateTransform attributeName="transform" type="rotate" from="0 380 205" to="360 380 205" dur="36s" repeatCount="indefinite"/></circle>
+  <circle cx="380" cy="205" r="98" fill="none" stroke="#7c6cff" stroke-opacity=".17" stroke-dasharray="2 7"><animateTransform attributeName="transform" type="rotate" from="360 380 205" to="0 380 205" dur="24s" repeatCount="indefinite"/></circle>
+  <circle cx="380" cy="205" r="78" fill="url(#core)" filter="url(#blur)"><animate attributeName="opacity" values=".55;1;.55" dur="4s" repeatCount="indefinite"/></circle>
+  <circle cx="380" cy="205" r="48" fill="#17152a" stroke="#9b8fff" stroke-opacity=".45"/><text x="380" y="201" text-anchor="middle" class="head" font-size="13">TECH</text><text x="380" y="220" text-anchor="middle" class="sub">STACK</text>
+  <g class="tag">
+    <g transform="translate(76 107)"><rect width="84" height="28" rx="14" fill="#3178c6"/><text x="42" y="18" text-anchor="middle">TypeScript</text></g>
+    <g transform="translate(184 84)"><rect width="86" height="28" rx="14" fill="#f7df1e"/><text x="43" y="18" text-anchor="middle" fill="#151515">JavaScript</text></g>
+    <g transform="translate(298 78)"><rect width="56" height="28" rx="14" fill="#0175c2"/><text x="28" y="18" text-anchor="middle">Dart</text></g>
+    <g transform="translate(403 78)"><rect width="58" height="28" rx="14" fill="#e76f00"/><text x="29" y="18" text-anchor="middle">Java</text></g>
+    <g transform="translate(511 84)"><rect width="65" height="28" rx="14" fill="#61dafb"/><text x="32" y="18" text-anchor="middle" fill="#111">React</text></g>
+    <g transform="translate(605 107)"><rect width="69" height="28" rx="14" fill="#54c5f8"/><text x="34" y="18" text-anchor="middle">Flutter</text></g>
+    <g transform="translate(66 162)"><rect width="75" height="28" rx="14" fill="#3ddc84"/><text x="37" y="18" text-anchor="middle" fill="#111">Android</text></g>
+    <g transform="translate(155 145)"><rect width="62" height="28" rx="14" fill="#e34f26"/><text x="31" y="18" text-anchor="middle">HTML5</text></g>
+    <g transform="translate(544 145)"><rect width="57" height="28" rx="14" fill="#1572b6"/><text x="28" y="18" text-anchor="middle">CSS3</text></g>
+    <g transform="translate(620 162)"><rect width="70" height="28" rx="14" fill="#339933"/><text x="35" y="18" text-anchor="middle">Node.js</text></g>
+    <g transform="translate(61 214)"><rect width="67" height="28" rx="14" fill="#ffffff" fill-opacity=".16"/><text x="33" y="18" text-anchor="middle">Express</text></g>
+    <g transform="translate(137 239)"><rect width="68" height="28" rx="14" fill="#ffffff" fill-opacity=".16"/><text x="34" y="18" text-anchor="middle">Next.js</text></g>
+    <g transform="translate(225 260)"><rect width="63" height="28" rx="14" fill="#2d3748"/><text x="31" y="18" text-anchor="middle">Prisma</text></g>
+    <g transform="translate(470 260)"><rect width="96" height="28" rx="14" fill="#336791"/><text x="48" y="18" text-anchor="middle">PostgreSQL</text></g>
+    <g transform="translate(577 239)"><rect width="75" height="28" rx="14" fill="#ffca28"/><text x="37" y="18" text-anchor="middle" fill="#111">Firebase</text></g>
+    <g transform="translate(633 214)"><rect width="61" height="28" rx="14" fill="#009639"/><text x="30" y="18" text-anchor="middle">Nginx</text></g>
+    <g transform="translate(66 296)"><rect width="64" height="28" rx="14" fill="#ff9900"/><text x="32" y="18" text-anchor="middle">AWS</text></g>
+    <g transform="translate(149 306)"><rect width="70" height="28" rx="14" fill="#000"/><text x="35" y="18" text-anchor="middle">Vercel</text></g>
+    <g transform="translate(239 314)"><rect width="68" height="28" rx="14" fill="#2496ed"/><text x="34" y="18" text-anchor="middle">Docker</text></g>
+    <g transform="translate(326 318)"><rect width="51" height="28" rx="14" fill="#f05032"/><text x="25" y="18" text-anchor="middle">Git</text></g>
+    <g transform="translate(395 318)"><rect width="66" height="28" rx="14" fill="#24292f"/><text x="33" y="18" text-anchor="middle">GitHub</text></g>
+    <g transform="translate(479 314)"><rect width="60" height="28" rx="14" fill="#fc6d26"/><text x="30" y="18" text-anchor="middle">GitLab</text></g>
+    <g transform="translate(558 306)"><rect width="59" height="28" rx="14" fill="#f24e1e"/><text x="29" y="18" text-anchor="middle">Figma</text></g>
+    <g transform="translate(636 296)"><rect width="55" height="28" rx="14" fill="#c21325"/><text x="27" y="18" text-anchor="middle">Jest</text></g>
+  </g>
+</svg>
