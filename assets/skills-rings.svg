@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="275" viewBox="0 0 760 275" role="img" aria-labelledby="title desc">
+  <title id="title">Core skills</title>
+  <desc id="desc">Animated proficiency rings for TypeScript, Python, Linux VPS, and Cloud DevOps.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161326"/><stop offset="1" stop-color="#0d0e18"/></linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c6cff"/><stop offset="1" stop-color="#5b8cff"/></linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="3"/></filter>
+    <style>.h{fill:#fff;font:700 16px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.s{fill:#918da9;font:11px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.label{fill:#edeaff;font:600 13px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.pct{fill:#fff;font:700 22px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}</style>
+  </defs>
+  <rect width="760" height="275" rx="22" fill="url(#panel)" stroke="#ffffff" stroke-opacity=".13"/>
+  <circle cx="90" cy="32" r="82" fill="#7c6cff" opacity=".12" filter="url(#glow)"><animate attributeName="opacity" values=".06;.18;.06" dur="5s" repeatCount="indefinite"/></circle>
+  <text x="30" y="43" class="h">Core skills</text><text x="30" y="62" class="s">Built through web, cloud, and automation projects</text>
+  <g transform="translate(116 158)">
+    <circle r="48" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="9"/><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="54.3" transform="rotate(-90)" filter="url(#glow)" opacity=".5"><animate attributeName="opacity" values=".32;.75;.32" dur="3.2s" repeatCount="indefinite"/></circle><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="54.3" transform="rotate(-90)"/><text y="7" text-anchor="middle" class="pct">82%</text><text y="78" text-anchor="middle" class="label">TypeScript</text><text y="96" text-anchor="middle" class="s">Web apps</text>
+  </g>
+  <g transform="translate(302 158)">
+    <circle r="48" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="9"/><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="84.4" transform="rotate(-90)" filter="url(#glow)" opacity=".5"><animate attributeName="opacity" values=".32;.75;.32" begin=".35s" dur="3.2s" repeatCount="indefinite"/></circle><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="84.4" transform="rotate(-90)"/><text y="7" text-anchor="middle" class="pct">72%</text><text y="78" text-anchor="middle" class="label">Python</text><text y="96" text-anchor="middle" class="s">Automation</text>
+  </g>
+  <g transform="translate(488 158)">
+    <circle r="48" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="9"/><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="36.2" transform="rotate(-90)" filter="url(#glow)" opacity=".5"><animate attributeName="opacity" values=".32;.75;.32" begin=".7s" dur="3.2s" repeatCount="indefinite"/></circle><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="36.2" transform="rotate(-90)"/><text y="7" text-anchor="middle" class="pct">88%</text><text y="78" text-anchor="middle" class="label">Linux / VPS</text><text y="96" text-anchor="middle" class="s">ServerDock</text>
+  </g>
+  <g transform="translate(674 158)">
+    <circle r="48" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="9"/><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="66.4" transform="rotate(-90)" filter="url(#glow)" opacity=".5"><animate attributeName="opacity" values=".32;.75;.32" begin="1.05s" dur="3.2s" repeatCount="indefinite"/></circle><circle r="48" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="66.4" transform="rotate(-90)"/><text y="7" text-anchor="middle" class="pct">78%</text><text y="78" text-anchor="middle" class="label">Cloud</text><text y="96" text-anchor="middle" class="s">DevOps</text>
+  </g>
+</svg>
