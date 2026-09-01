@@ -6,21 +6,27 @@ if (!input || !output) throw new Error("Usage: node generate-activity-card.mjs <
 const { data } = JSON.parse(await readFile(input, "utf8"));
 const calendar = data.user.contributionsCollection.contributionCalendar;
 const weeks = calendar.weeks;
-const cell = 10;
+// 53 weeks must fit within the 760px card without cropping on GitHub.
+const cell = 9;
 const gap = 3;
 const step = cell + gap;
-const x = 92;
+const x = 85;
 const y = 110;
 const levels = { NONE: "#ffffff12", FIRST_QUARTILE: "#554c9c", SECOND_QUARTILE: "#7468da", THIRD_QUARTILE: "#9589ff", FOURTH_QUARTILE: "#c3bcff" };
 const escape = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" })[char]);
 const monthLabels = [];
 let previousMonth = "";
+let lastMonthColumn = -99;
 for (let index = 0; index < weeks.length; index += 1) {
   const date = new Date(`${weeks[index].firstDay}T00:00:00Z`);
   const month = date.toLocaleString("en", { month: "short", timeZone: "UTC" });
-  if (month !== previousMonth) {
+  // The first column commonly starts on the final days of the prior month.
+  // Hide that partial label and keep at least three columns between labels.
+  if (index === 0 && date.getUTCDate() > 7) continue;
+  if (month !== previousMonth && index - lastMonthColumn >= 3) {
     monthLabels.push(`<text x="${x + index * step}" y="96" class="label">${month}</text>`);
     previousMonth = month;
+    lastMonthColumn = index;
   }
 }
 const squares = weeks.flatMap((week, column) => week.contributionDays.map((day) => {
