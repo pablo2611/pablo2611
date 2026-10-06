@@ -22,6 +22,22 @@
 
 <br />
 
+## Selected project · Otro Plano
+
+<a href="https://pablo2611.github.io/otro-plano/">
+  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/otro-plano.jpg" alt="Otro Plano — interactive creative studio website with a generative 3D sculpture" width="100%" />
+</a>
+
+### Creative web, with room to explore.
+
+An interactive studio experience with a generative 3D sculpture, expressive typography, project stories, and an experimental film room.
+
+**React · Next.js · TypeScript · Three.js**
+
+**[Explore the live demo ↗](https://pablo2611.github.io/otro-plano/)** &nbsp; · &nbsp; **[Browse the source](https://github.com/pablo2611/otro-plano)**
+
+---
+
 <table>
   <tr>
     <td width="50%" valign="top">
@@ -52,3 +68,4 @@
 <div align="center">
   <sub>The activity card is decorative and animated; GitHub's native contribution graph remains the source of truth.</sub>
 </div>
+
