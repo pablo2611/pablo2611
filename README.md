@@ -22,35 +22,14 @@
 
 <br />
 
-## Selected project · AERION
+## Interactive experiences
 
-<a href="https://pablo2611.github.io/aerion/">
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/aerion.jpg" alt="AERION — electric grand tourer in a live 3D driving scene" width="100%" />
-</a>
+<p align="center">
+  <a href="https://pablo2611.github.io/aerion/"><img src="assets/aerion-card.svg" alt="AERION — conducir la demo 3D con color y sonido" width="360" /></a>
+  <a href="https://pablo2611.github.io/otro-plano/"><img src="assets/otro-plano-card.svg" alt="Otro Plano — explorar diseño, escultura 3D y cine" width="360" /></a>
+</p>
 
-### A grand tourer, brought to life.
-
-An automotive concept with a detailed 3D vehicle, an animated road, live paint configuration, original ambient music, electric motor synthesis, and a guided Spanish voice assistant.
-
-**React · TypeScript · Three.js · Web Audio · Web Speech**
-
-**[Take the live drive ↗](https://pablo2611.github.io/aerion/)** &nbsp; · &nbsp; **[Browse the source](https://github.com/pablo2611/aerion)**
-
----
-
-## Selected project · Otro Plano
-
-<a href="https://pablo2611.github.io/otro-plano/">
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/otro-plano.jpg" alt="Otro Plano — interactive creative studio website with a generative 3D sculpture" width="100%" />
-</a>
-
-### Creative web, with room to explore.
-
-An interactive studio experience with a generative 3D sculpture, expressive typography, project stories, and an experimental film room.
-
-**React · Next.js · TypeScript · Three.js**
-
-**[Explore the live demo ↗](https://pablo2611.github.io/otro-plano/)** &nbsp; · &nbsp; **[Browse the source](https://github.com/pablo2611/otro-plano)**
+<p align="center"><sub>Click a card to enter · Source: <a href="https://github.com/pablo2611/aerion">AERION</a> / <a href="https://github.com/pablo2611/otro-plano">Otro Plano</a></sub></p>
 
 ---
 
