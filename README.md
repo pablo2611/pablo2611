@@ -29,7 +29,10 @@
   <a href="https://pablo2611.github.io/otro-plano/"><img src="assets/otro-plano-card.svg" alt="Otro Plano — explorar diseño, escultura 3D y cine" width="360" /></a>
 </p>
 
-<p align="center"><sub>Haz clic en una tarjeta para entrar · Código: <a href="https://github.com/pablo2611/aerion">AERION</a> / <a href="https://github.com/pablo2611/otro-plano">Otro Plano</a></sub></p>
+<p align="center">
+  <a href="https://pablo2611.github.io/aerion/">Conducir AERION ↗</a> · <a href="https://github.com/pablo2611/aerion">Código de AERION</a><br />
+  <a href="https://pablo2611.github.io/otro-plano/">Explorar Otro Plano ↗</a> · <a href="https://github.com/pablo2611/otro-plano">Código de Otro Plano</a>
+</p>
 
 ---
 
