@@ -22,6 +22,22 @@
 
 <br />
 
+## Selected project · AERION
+
+<a href="https://pablo2611.github.io/aerion/">
+  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/aerion.jpg" alt="AERION — electric grand tourer in a live 3D driving scene" width="100%" />
+</a>
+
+### A grand tourer, brought to life.
+
+An automotive concept with a detailed 3D vehicle, an animated road, live paint configuration, original ambient music, electric motor synthesis, and a guided Spanish voice assistant.
+
+**React · TypeScript · Three.js · Web Audio · Web Speech**
+
+**[Take the live drive ↗](https://pablo2611.github.io/aerion/)** &nbsp; · &nbsp; **[Browse the source](https://github.com/pablo2611/aerion)**
+
+---
+
 ## Selected project · Otro Plano
 
 <a href="https://pablo2611.github.io/otro-plano/">
