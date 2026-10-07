@@ -11,7 +11,10 @@
 <br />
 
 <div align="center">
-  <a href="https://github.com/pablo2611?tab=overview"><img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1791332581125" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" /></a>
+  <a href="https://github.com/pablo2611?tab=overview"><picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap-mobile.svg?v=1791332896744" />
+    <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1791332896744" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" />
+  </picture></a>
 </div>
 
 <br />
