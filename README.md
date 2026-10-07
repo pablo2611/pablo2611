@@ -2,7 +2,7 @@
 
 # Pablo Sánchez
 
-### Construyo bots de Telegram, integro APIs de IA y automatizo servicios sobre Python y VPS.
+### Desarrollo experiencias digitales y sistemas inteligentes que conectan diseño, software y automatización.
 
 <a href="https://github.com/pablo2611?tab=repositories"><img src="https://img.shields.io/badge/Explora_mis_proyectos-6C63FF?style=for-the-badge&logo=github&logoColor=white" alt="Explora mis proyectos" /></a>
 
