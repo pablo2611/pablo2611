@@ -22,6 +22,15 @@
 ## Habilidades y enfoque profesional
 
 <p align="center">
+  <picture>
+    <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/skills-rings-mobile.svg" />
+    <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/skills-rings.svg" alt="Resumen animado de habilidades: TypeScript, Python, Linux VPS y Cloud" width="100%" />
+  </picture>
+</p>
+
+### Bots, servidores e integraciones
+
+<p align="center">
   <img src="assets/skill-vps.svg" alt="Linux / VPS: Servidores y servicios en producción; SSH, Docker, Nginx y procesos; Despliegue, logs y monitorización" width="320" />
   <img src="assets/skill-python.svg" alt="Python: Automatización y backends para bots; Async, tareas y manejo de eventos; APIs, colas y procesos persistentes" width="320" />
   <img src="assets/skill-telegram.svg" alt="Telegram bots: Bots y comunicación inteligente; Bot API, webhooks y conversaciones; Notificaciones, comandos e IA" width="320" />
