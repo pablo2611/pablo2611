@@ -2,7 +2,7 @@ name: Update live contribution card
 
 on:
   schedule:
-    - cron: "17 5 * * *"
+    - cron: "17 */6 * * *"
   workflow_dispatch:
   push:
     paths:

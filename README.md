@@ -11,7 +11,7 @@
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1791288150844" alt="Mapa animado de actividad decorativa" width="100%" />
+  <a href="https://github.com/pablo2611?tab=overview"><img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1791332559249" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" /></a>
 </div>
 
 <br />
@@ -64,6 +64,6 @@
 </table>
 
 <div align="center">
-  <sub>La tarjeta de actividad es una animación decorativa. El gráfico de contribuciones de GitHub muestra la actividad real.</sub>
+  <sub>Actividad real obtenida de GitHub. La tarjeta se actualiza cada seis horas; GitHub puede tardar en contabilizar los commits recientes.</sub>
 </div>
 
