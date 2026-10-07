@@ -2,7 +2,7 @@
 
 # Pablo Sánchez
 
-### Desarrollo herramientas prácticas para la web, la nube y la automatización.
+### Construyo bots de Telegram, integro APIs de IA y automatizo servicios sobre Python y VPS.
 
 <a href="https://github.com/pablo2611?tab=repositories"><img src="https://img.shields.io/badge/Explora_mis_proyectos-6C63FF?style=for-the-badge&logo=github&logoColor=white" alt="Explora mis proyectos" /></a>
 
@@ -12,16 +12,25 @@
 
 <div align="center">
   <a href="https://github.com/pablo2611?tab=overview"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap-mobile.svg?v=1791332952388" />
+    <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap-mobile.svg?v=1791332952388" />
     <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1791332952388" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" />
   </picture></a>
 </div>
 
 <br />
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/skills-rings.svg" alt="Tecnologías: TypeScript, Python, Linux VPS y Cloud DevOps" width="100%" />
-</div>
+## Habilidades y enfoque profesional
+
+<p align="center">
+  <img src="assets/skill-vps.svg" alt="Linux / VPS: Servidores y servicios en producción; SSH, Docker, Nginx y procesos; Despliegue, logs y monitorización" width="320" />
+  <img src="assets/skill-python.svg" alt="Python: Automatización y backends para bots; Async, tareas y manejo de eventos; APIs, colas y procesos persistentes" width="320" />
+  <img src="assets/skill-telegram.svg" alt="Telegram bots: Bots y comunicación inteligente; Bot API, webhooks y conversaciones; Notificaciones, comandos e IA" width="320" />
+  <img src="assets/skill-ai.svg" alt="APIs de IA: Asistentes conectados a servicios; Contexto, herramientas y respuestas; APIs externas y comunicaciones" width="320" />
+  <img src="assets/skill-flows.svg" alt="Flujos / n8n: Automatización entre aplicaciones; Triggers, webhooks y conexiones; Python + Telegram + servicios" width="320" />
+  <img src="assets/skill-web.svg" alt="Web interactiva: Interfaces, experiencias y producto; React, TypeScript y Three.js; Diseño, movimiento y rendimiento" width="320" />
+</p>
+
+**Mi enfoque:** sistemas que conectan un bot de Telegram con Python, APIs de IA y servicios externos; flujos de eventos y webhooks tipo n8n, desplegados y mantenidos en servidores Linux/VPS.
 
 <br />
 
@@ -39,32 +48,17 @@
 
 ---
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>⚡ Qué construyo</h3>
-      <p>Software útil con interfaces claras: aplicaciones web, herramientas para gestionar la nube y automatización que ahorra tiempo.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🛠️ Tecnologías principales</h3>
-      <p>
-        <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=3178C6" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=FFD43B" alt="Python" />
-        <img src="https://img.shields.io/badge/Linux-111827?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>📦 Proyecto destacado</h3>
-      <p><a href="https://github.com/pablo2611/serverdock"><b>serverdock</b></a><br />Un panel bilingüe para gestionar servidores Linux VPS.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>📍 Desde</h3>
-      <p>Panamá 🌴<br />Disponible para construir herramientas útiles.</p>
-    </td>
-  </tr>
-</table>
+## Qué construyo
+
+- **Bots y comunicaciones:** comandos, conversaciones, notificaciones y conexiones entre Telegram y servicios externos.
+- **Python + IA:** backends asíncronos, contexto, herramientas, integración de APIs y automatizaciones.
+- **Servidores y VPS:** despliegue, procesos persistentes, contenedores, proxy, registros y monitorización.
+- **Flujos de trabajo:** triggers, webhooks y automatización entre aplicaciones con herramientas tipo n8n.
+
+**Proyecto destacado:** [serverdock](https://github.com/pablo2611/serverdock), un panel bilingüe para gestionar servidores Linux VPS.
+
+**Desde Panamá.** Disponible para construir herramientas, bots e integraciones útiles.
+
 
 <div align="center">
   <sub>Actividad real obtenida de GitHub. La tarjeta se actualiza cada seis horas; GitHub puede tardar en contabilizar los commits recientes.</sub>

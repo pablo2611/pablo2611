@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="162" viewBox="0 0 320 162" role="img" aria-label="Flujos / n8n / WORKFLOWS">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#17142b"/><stop offset="1" stop-color="#0d1117"/></linearGradient><style>text{font-family:Arial,sans-serif}.flow{animation:travel 4s linear infinite}@keyframes travel{from{transform:translateX(0)}to{transform:translateX(258px)}}@media(prefers-reduced-motion:reduce){.flow{animation:none}}</style></defs>
+<rect x=".5" y=".5" width="319" height="161" rx="16" fill="url(#bg)" stroke="#353047"/>
+<g transform="translate(39 37)" stroke="#b7adff" stroke-width="2" fill="none" stroke-linecap="round"><path d="M-13 0h26m-13 0v-11m0 11v11"/><circle cx="-13" r="4"/><circle cx="13" r="4"/><circle cy="-11" r="4"/><circle cy="11" r="4"/></g>
+<text x="70" y="36" fill="white" font-size="18" font-weight="700">Flujos / n8n</text><text x="70" y="55" fill="#a99cff" font-size="10" font-weight="700" letter-spacing="1">WORKFLOWS</text>
+<text x="24" y="84" fill="#eeeaff" font-size="13">Automatización entre aplicaciones</text><text x="24" y="106" fill="#b9b5ca" font-size="12">Triggers, webhooks y conexiones</text><text x="24" y="125" fill="#b9b5ca" font-size="12">Python + Telegram + servicios</text>
+<path d="M24 145H296" stroke="#3d3658"/><g><circle class="flow" cx="24" cy="145" r="3" fill="#9c8cff"/></g>
+</svg>
