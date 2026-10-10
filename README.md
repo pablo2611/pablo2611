@@ -19,27 +19,27 @@
 
 <br />
 
-## Habilidades y enfoque profesional
+## Especialidades
 
 <p align="center">
-  <picture>
-    <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/skills-rings-mobile.svg" />
-    <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/skills-rings.svg" alt="Resumen animado de habilidades: TypeScript, Python, Linux VPS y Cloud" width="100%" />
-  </picture>
+  <a href="https://github.com/pablo2611/serverdock"><img src="assets/expertise-infrastructure.svg" alt="Infraestructura: Linux VPS y Cloud; despliegue, contenedores y monitorización. Ver ServerDock." width="268" /></a>
+  <a href="https://github.com/pablo2611?tab=repositories"><img src="assets/expertise-automation.svg" alt="Automatización e IA: Python, Telegram y n8n; bots, APIs y flujos entre servicios. Ver repositorios." width="268" /></a>
+  <a href="https://pablo2611.github.io/aerion/"><img src="assets/expertise-web.svg" alt="Web interactiva: React, TypeScript y Three.js; interfaces 3D, diseño y rendimiento. Explorar AERION." width="268" /></a>
 </p>
 
-### Bots, servidores e integraciones
+<details>
+<summary>Ver habilidades técnicas</summary>
 
-<p align="center">
-  <img src="assets/skill-vps.svg" alt="Linux / VPS: Servidores y servicios en producción; SSH, Docker, Nginx y procesos; Despliegue, logs y monitorización" width="320" />
-  <img src="assets/skill-python.svg" alt="Python: Automatización y backends para bots; Async, tareas y manejo de eventos; APIs, colas y procesos persistentes" width="320" />
-  <img src="assets/skill-telegram.svg" alt="Telegram bots: Bots y comunicación inteligente; Bot API, webhooks y conversaciones; Notificaciones, comandos e IA" width="320" />
-  <img src="assets/skill-ai.svg" alt="APIs de IA: Asistentes conectados a servicios; Contexto, herramientas y respuestas; APIs externas y comunicaciones" width="320" />
-  <img src="assets/skill-flows.svg" alt="Flujos / n8n: Automatización entre aplicaciones; Triggers, webhooks y conexiones; Python + Telegram + servicios" width="320" />
-  <img src="assets/skill-web.svg" alt="Web interactiva: Interfaces, experiencias y producto; React, TypeScript y Three.js; Diseño, movimiento y rendimiento" width="320" />
-</p>
+| Área | Enfoque |
+| --- | --- |
+| **Linux / VPS** | SSH, Docker, Nginx; despliegue, logs y monitorización. |
+| **Python** | Backends asíncronos, tareas, colas y procesos persistentes. |
+| **Telegram bots** | Bot API, webhooks, conversaciones, comandos y notificaciones. |
+| **APIs de IA** | Contexto, herramientas e integración con servicios externos. |
+| **Flujos / n8n** | Eventos, webhooks y automatización entre aplicaciones. |
+| **Web interactiva** | React, TypeScript y Three.js; diseño, movimiento y rendimiento. |
 
-**Mi enfoque:** sistemas que conectan un bot de Telegram con Python, APIs de IA y servicios externos; flujos de eventos y webhooks tipo n8n, desplegados y mantenidos en servidores Linux/VPS.
+</details>
 
 <br />
 
@@ -56,15 +56,6 @@
 </p>
 
 ---
-
-## Qué construyo
-
-- **Bots y comunicaciones:** comandos, conversaciones, notificaciones y conexiones entre Telegram y servicios externos.
-- **Python + IA:** backends asíncronos, contexto, herramientas, integración de APIs y automatizaciones.
-- **Servidores y VPS:** despliegue, procesos persistentes, contenedores, proxy, registros y monitorización.
-- **Flujos de trabajo:** triggers, webhooks y automatización entre aplicaciones con herramientas tipo n8n.
-
-**Proyecto destacado:** [serverdock](https://github.com/pablo2611/serverdock), un panel bilingüe para gestionar servidores Linux VPS.
 
 **Desde Panamá.** Disponible para construir herramientas, bots e integraciones útiles.
 

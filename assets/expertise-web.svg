@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="156" viewBox="0 0 268 156" role="img" aria-labelledby="title description">
+<title id="title">Web interactiva</title><desc id="description">React · TypeScript · Three.js. Interfaces 3D y producto con diseño y rendimiento. Explorar AERION.</desc>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}.presence{animation:presence 4s ease-in-out infinite}@keyframes presence{0%,100%{opacity:.4}50%{opacity:1}}@media(prefers-reduced-motion:reduce){.presence{animation:none}}</style>
+<rect x=".5" y=".5" width="267" height="155" rx="14" fill="#131D30" stroke="#3D5279"/>
+<g fill="none" stroke="#9DBFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m25 23-8 8 8 8m14-16 8 8-8 8m-2-19-7 23"/></g>
+<text x="54" y="36" fill="#F4F8FA" font-size="16" font-weight="700">Web interactiva</text>
+<text x="20" y="62" fill="#9DBFFF" font-size="11.5" font-weight="500">React · TypeScript · Three.js</text>
+<text x="20" y="89" fill="#CDD9F0" font-size="13">Interfaces 3D y producto</text>
+<text x="20" y="109" fill="#CDD9F0" font-size="13">con diseño y rendimiento.</text>
+<text x="20" y="138" fill="#9DBFFF" font-size="11.5" font-weight="600">Explorar AERION</text>
+<g stroke="#9DBFFF" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M238 139l9-9m-8 0h8v8"/></g>
+<circle class="presence" cx="246" cy="58" r="2" fill="#9DBFFF"/>
+</svg>
