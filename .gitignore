@@ -1,0 +1,5 @@
+showcase/node_modules/
+showcase/.next/
+showcase/out/
+showcase/next-env.d.ts
+showcase/tsconfig.tsbuildinfo

@@ -22,10 +22,12 @@
 ## Especialidades
 
 <p align="center">
-  <a href="https://github.com/pablo2611/serverdock"><img src="assets/expertise-infrastructure.svg" alt="Infraestructura: Linux VPS y Cloud; despliegue, contenedores y monitorización. Ver ServerDock." width="268" /></a>
-  <a href="https://github.com/pablo2611?tab=repositories"><img src="assets/expertise-automation.svg" alt="Automatización e IA: Python, Telegram y n8n; bots, APIs y flujos entre servicios. Ver repositorios." width="268" /></a>
-  <a href="https://pablo2611.github.io/aerion/"><img src="assets/expertise-web.svg" alt="Web interactiva: React, TypeScript y Three.js; interfaces 3D, diseño y rendimiento. Explorar AERION." width="268" /></a>
+  <a href="https://pablo2611.github.io/pablo2611/#infraestructura"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/expertise-infrastructure-poster.png" /><img src="assets/expertise-infrastructure-motion.gif" alt="Infraestructura: Linux VPS y Cloud. Globo 3D animado; abrir experiencia interactiva y ServerDock." width="268" /></picture></a>
+  <a href="https://pablo2611.github.io/pablo2611/#automatizacion"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/expertise-automation-poster.png" /><img src="assets/expertise-automation-motion.gif" alt="Automatización e IA: conexiones animadas entre Python, Telegram, IA, n8n y APIs. Abrir experiencia interactiva." width="268" /></picture></a>
+  <a href="https://pablo2611.github.io/pablo2611/#web"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/expertise-web-poster.png" /><img src="assets/expertise-web-motion.gif" alt="Web interactiva: React, TypeScript y Three.js. Pieza 3D animada; abrir experiencia y AERION." width="268" /></picture></a>
 </p>
+
+<p align="center"><a href="https://pablo2611.github.io/pablo2611/">Explorar la versión interactiva ↗</a></p>
 
 <details>
 <summary>Ver habilidades técnicas</summary>
