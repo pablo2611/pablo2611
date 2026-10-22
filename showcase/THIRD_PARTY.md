@@ -1,11 +1,11 @@
 # Component sources
 
-This showcase is an original system map built for Pablo Sánchez's profile.
+This showcase is an original animated dashboard built for Pablo Sánchez's profile.
 
 - **Lucide**, ISC: https://github.com/lucide-icons/lucide. Interface icons.
 - **Manrope**, SIL Open Font License: https://github.com/sharanda/manrope. Self-hosted through Fontsource.
 
-The topology is illustrative: it describes areas of practice, not live deployment telemetry. Its paths animate with CSS and the selected station uses native radio controls, so the page remains usable without client-side JavaScript.
+The dashboard SVGs are authored in `scripts/generate-dashboard.mjs`. GitHub contributions and repository language sizes come from the GitHub GraphQL API. Language percentages describe the five largest languages by bytes in public, non-fork repositories owned by the account. The skills diagram is illustrative, not deployment telemetry. CSS animations work inside the SVGs with a reduced-motion fallback; no WebGL or client-side JavaScript is required.
 
 Earlier experimental source adapted from Magic UI remains in this repository but is not imported by the current public route. Its MIT license remains in [licenses/magic-ui.txt](licenses/magic-ui.txt).
 

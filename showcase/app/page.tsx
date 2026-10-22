@@ -1,5 +1,4 @@
 import { ArrowUpRight, Github, MapPin } from 'lucide-react';
-import { SystemField } from '@/components/system-field';
 
 const projects = [
   { name: 'ServerDock', type: 'Infraestructura y servicios', href: 'https://github.com/pablo2611/serverdock' },
@@ -20,15 +19,21 @@ export default function Home() {
         </a>
       </nav>
 
-      <header className="intro">
-        <h1>Lo complejo por dentro.<br /><span>Claro para quien lo usa.</span></h1>
-        <div>
-          <p>Arquitectura, automatización e interfaces pensadas como una sola experiencia.</p>
-          <a href="https://github.com/pablo2611?tab=repositories">Ver proyectos <ArrowUpRight size={17} aria-hidden="true" /></a>
-        </div>
+      <header className="dashboard-intro">
+        <h1 className="sr-only">Pablo Sánchez — Ideas conectadas. Sistemas que responden.</h1>
+        <img src="/pablo2611/dashboard/hero.svg" width="880" height="230" alt="Pablo Sánchez. Ideas conectadas. Sistemas que responden. Panamá · Python · Linux VPS · experiencias web." />
       </header>
 
-      <SystemField />
+      <section className="dashboard-section" aria-labelledby="dashboard-heading">
+        <h2 id="dashboard-heading">Ingeniería en movimiento</h2>
+        <div className="dashboard-grid">
+          <a href="https://github.com/pablo2611?tab=overview" aria-label="Ver actividad en GitHub"><img src="/pablo2611/dashboard/stats.svg" width="440" height="230" alt="Actividad real y repositorios públicos de Pablo" /></a>
+          <a href="https://github.com/pablo2611?tab=repositories" aria-label="Explorar repositorios y lenguajes"><img src="/pablo2611/dashboard/languages.svg" width="440" height="240" alt="Distribución real de lenguajes en repositorios propios" /></a>
+          <a href="https://github.com/pablo2611?tab=overview" aria-label="Ver contribuciones recientes"><img src="/pablo2611/dashboard/activity.svg" width="440" height="230" alt="Gráfica de contribuciones durante el último mes" /></a>
+          <a href="https://github.com/pablo2611?tab=repositories" aria-label="Explorar proyectos de automatización"><img src="/pablo2611/dashboard/skills.svg" width="440" height="230" alt="Telegram, Python, IA, Linux, n8n y React" /></a>
+        </div>
+        <p className="dashboard-source">Datos públicos de GitHub · actualización cada seis horas · lenguajes por tamaño de código en repositorios propios.</p>
+      </section>
 
       <section className="projects" aria-labelledby="projects-title">
         <h2 id="projects-title">Trabajo seleccionado</h2>

@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths: ['showcase/**', '.github/workflows/deploy-showcase.yml']
   workflow_dispatch:
+  schedule:
+    - cron: '45 */6 * * *'
 permissions:
   contents: read
   pages: write

@@ -1,0 +1,40 @@
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+
+const source = JSON.parse((await readFile(process.argv[2] || 'dashboard-data.json', 'utf8')).replace(/^\uFEFF/, ''));
+const user = source.data?.user;
+if (!user?.contributionsCollection?.contributionCalendar || !user.repositories?.nodes) throw new Error('Missing GitHub data');
+const calendar = user.contributionsCollection.contributionCalendar;
+const days = calendar.weeks.flatMap(w => w.contributionDays);
+const recent = days.slice(-30);
+const repos = user.repositories.nodes;
+const languages = new Map();
+for (const repo of repos) for (const {size,node} of repo.languages.edges) {
+  const previous = languages.get(node.name) || { ...node, size: 0 };
+  previous.size += size;
+  languages.set(node.name, previous);
+}
+const top = [...languages.values()].sort((a,b) => b.size-a.size).slice(0,5);
+const totalBytes = top.reduce((sum,lang) => sum+lang.size,0);
+const sum30 = recent.reduce((sum,day) => sum+day.contributionCount,0);
+const activeDays = days.filter(day => day.contributionCount>0).length;
+const date = days.at(-1).date;
+const esc = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[char]));
+const style = `<style>text{font-family:Arial,Helvetica,sans-serif;fill:#edf3f8}.title{font-size:18px;font-weight:700;letter-spacing:-.4px}.muted{fill:#a3b3c4;font-size:12px}.value{font-size:40px;font-weight:700;letter-spacing:-1.5px}.label{font-size:13px}.orbit{transform-origin:348px 96px;animation:orbit 19s linear infinite}.orbit-back{transform-origin:348px 96px;animation:orbit 27s linear infinite reverse}.float{animation:float 4s cubic-bezier(.77,0,.175,1) infinite alternate}.trace{animation:trace 7s linear infinite}.spark{animation:spark 2.8s ease-in-out infinite alternate}.bar{transform-box:fill-box;transform-origin:left;animation:bar 6s cubic-bezier(.77,0,.175,1) infinite}.scan{animation:scan 8s linear infinite}@keyframes orbit{to{transform:rotate(360deg)}}@keyframes float{to{transform:translateY(-5px)}}@keyframes trace{to{stroke-dashoffset:-120}}@keyframes spark{to{opacity:.35}}@keyframes bar{0%,100%{opacity:.8}50%{opacity:1}}@keyframes scan{0%,100%{opacity:0}40%,65%{opacity:.8}}@media(prefers-reduced-motion:reduce){.orbit,.orbit-back,.float,.trace,.spark,.bar,.scan{animation:none}}</style>`;
+function svg(body,w=440,h=230,title='Pablo Sánchez — perfil de ingeniería') {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img"><title>${esc(title)}</title>${style}<rect x=".5" y=".5" width="${w-1}" height="${h-1}" rx="16" fill="#0c1420" stroke="#28394c"/>${body}</svg>`;
+}
+const baseline = 175, max = Math.max(1,...recent.map(day => day.contributionCount));
+const points = recent.map((day,i) => `${28+i*13.2},${baseline-day.contributionCount/max*90}`).join(' ');
+const metric = (x,value,label,color) => `<text x="${x}" y="94" class="value" style="fill:${color}">${value}</text><text x="${x}" y="118" class="muted">${label}</text>`;
+const stats = svg(`<text x="26" y="32" class="title">El código, en movimiento.</text>${metric(26,calendar.totalContributions,'contribuciones / 12 meses','#72c7ff')}${metric(258,repos.length,'repos públicos propios','#d4c2ff')}<path d="M26 140H414" stroke="#28394c"/><text x="26" y="169" class="label">${activeDays} días con actividad</text><text x="26" y="194" class="muted">${repos.reduce((sum,repo)=>sum+repo.stargazerCount,0)} estrellas en repositorios propios</text><g class="orbit"><circle cx="348" cy="96" r="48" fill="none" stroke="#627c9b" stroke-dasharray="2 9" opacity=".25"/></g><text x="414" y="211" text-anchor="end" class="muted">GitHub · ${date}</text>`,440,230,'Actividad real de Pablo Sánchez');
+let offset = 26;
+const segments = top.map((lang,i) => { const width=388*lang.size/totalBytes; const result=`<rect class="bar" x="${offset}" y="60" width="${width}" height="12" fill="${lang.color||'#82caff'}" style="animation-delay:${i*.3}s"/>`;offset+=width;return result;}).join('');
+const language = svg(`<text x="26" y="32" class="title">Lenguajes en mis proyectos</text><clipPath id="stack-clip"><rect x="26" y="60" width="388" height="12" rx="6"/></clipPath><g clip-path="url(#stack-clip)">${segments}</g>${top.map((lang,i)=>`<circle class="spark" cx="31" cy="${98+i*23}" r="4" fill="${lang.color||'#82caff'}" style="animation-delay:${i*.4}s"/><text x="44" y="${102+i*23}" class="label">${esc(lang.name)}</text><text x="410" y="${102+i*23}" text-anchor="end" class="muted">${(lang.size/totalBytes*100).toFixed(1)}%</text>`).join('')}<text x="26" y="220" class="muted" style="font-size:10px">Proporción de bytes · 5 principales · repos propios públicos</text>`,440,240,'Lenguajes de repositorios públicos propios');
+const activity = svg(`<text x="26" y="32" class="title">Un mes de trabajo</text><text x="412" y="32" text-anchor="end" class="label" style="fill:#89d8bd">${sum30} contribuciones</text><path d="M28 85H412M28 130H412M28 175H412" stroke="#25374b" stroke-dasharray="2 6"/><polyline points="${points}" fill="none" stroke="#5cbcff" stroke-width="2.5" stroke-linejoin="round"/>${recent.map((day,i)=>`<circle cx="${28+i*13.2}" cy="${baseline-day.contributionCount/max*90}" r="2.5" fill="#b4e4ff"/>`).join('')}<polyline class="trace" points="${points}" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="8 112" opacity=".7"/><text x="28" y="202" class="muted">${recent[0].date}</text><text x="412" y="202" text-anchor="end" class="muted">${date}</text>`,440,230,'Contribuciones reales durante los últimos treinta días');
+const skills = svg(`<text x="26" y="32" class="title">De la interacción a la operación</text><g fill="none" stroke="#44576d" stroke-width="1.5"><path d="M72 88H220V154H366"/><path d="M220 88H366"/></g><path class="trace" d="M72 88H220V154H366" fill="none" stroke="#ad98ef" stroke-width="2" stroke-dasharray="8 22"/>${[[72,88,'Telegram','#64caff'],[220,88,'Python + IA','#b6a1ff'],[366,88,'Linux / VPS','#91d2b3'],[72,154,'React / 3D','#f4ae84'],[220,154,'n8n / APIs','#b6a1ff'],[366,154,'Servicios','#91d2b3']].map(([x,y,label,color],i)=>`<circle class="spark" cx="${x}" cy="${y}" r="7" fill="${color}" style="animation-delay:${i*.4}s"/><text x="${x}" y="${Number(y)+25}" text-anchor="middle" class="muted">${label}</text>`).join('')}<text x="26" y="211" class="muted">Bots · automatización · infraestructura · web interactiva</text>`,440,230,'Especialidades de ingeniería y automatización');
+const hero = svg(`<path d="M28 54H852" stroke="#2a3d51"/><text x="28" y="32" class="muted">pablo2611 / ingeniería de software</text><circle cx="846" cy="27" r="4" fill="#8dd8b5" class="spark"/><text x="34" y="111" style="font-size:43px;font-weight:700;letter-spacing:-1.5px">Pablo <tspan fill="#79caff" style="fill:#79caff">Sánchez</tspan></text><text x="36" y="149" style="font-size:17px;fill:#c9d7e6">Ideas conectadas. Sistemas que responden.</text><text x="36" y="193" class="muted">Panamá · Python · Linux / VPS · experiencias web</text><g transform="translate(390 21)"><g class="orbit"><ellipse cx="348" cy="96" rx="70" ry="43" fill="none" stroke="#77caff" stroke-width="1.5"/><circle cx="418" cy="96" r="6" fill="#77caff"/></g><g class="orbit-back"><ellipse cx="348" cy="96" rx="78" ry="66" fill="none" stroke="#b6a1ff" stroke-dasharray="3 8"/><circle cx="270" cy="96" r="4" fill="#b6a1ff"/></g><g class="float"><path d="m326 80-17 16 17 16m44-32 17 16-17 16m-16-38-12 36" stroke="#d6eeff" stroke-width="4" stroke-linecap="round" fill="none"/></g></g>`,880,230,'Pablo Sánchez — ingeniería de software desde Panamá');
+await mkdir('assets',{recursive:true});
+for (const [name,markup] of Object.entries({hero,stats,languages:language,activity,skills})) await writeFile(`assets/dashboard-${name}.svg`,markup);
+await mkdir('showcase/public/dashboard',{recursive:true});
+for (const [name,markup] of Object.entries({hero,stats,languages:language,activity,skills})) await writeFile(`showcase/public/dashboard/${name}.svg`,markup);
+console.log(`Rendered dashboard from GitHub: ${calendar.totalContributions} contributions, ${repos.length} repositories`);

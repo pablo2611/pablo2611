@@ -1,5 +1,5 @@
-import { SystemField } from '@/components/system-field';
+import Home from '../page';
 
 export default function Preview() {
-  return <main className="preview"><SystemField compact /></main>;
+  return <Home />;
 }

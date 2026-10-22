@@ -1,22 +1,21 @@
 <div align="center">
 
-# Pablo Sánchez
+<img src="assets/dashboard-hero.svg" width="100%" alt="Pablo Sánchez — Ideas conectadas. Sistemas que responden. Ingeniería de software desde Panamá." />
 
-### Sistemas sólidos por dentro. Experiencias claras por fuera.
-
-<a href="https://github.com/pablo2611?tab=repositories">Ver proyectos</a> · <a href="https://pablo2611.github.io/pablo2611/">Abrir mapa interactivo</a>
+<a href="https://github.com/pablo2611?tab=repositories">Ver proyectos</a> · <a href="https://pablo2611.github.io/pablo2611/">Explorar mi dashboard</a>
 
 </div>
 
 <br />
 
-## Sistemas conectados
+## Ingeniería en movimiento
 
-<p align="center">
-  <a href="https://pablo2611.github.io/pablo2611/"><img src="assets/profile-system-field-card.png" alt="Mapa interactivo de sistemas: Telegram, Python, APIs de IA, n8n, Linux VPS y React Three.js conectados en una sola experiencia." width="100%" /></a>
-</p>
+| Actividad real | Lenguajes |
+| :--- | :--- |
+| [![Actividad de GitHub](assets/dashboard-stats.svg)](https://github.com/pablo2611?tab=overview) | [![Lenguajes de repositorios propios](assets/dashboard-languages.svg)](https://github.com/pablo2611?tab=repositories) |
+| [![Actividad del último mes](assets/dashboard-activity.svg)](https://github.com/pablo2611?tab=overview) | [![Bots, IA, servidores y web](assets/dashboard-skills.svg)](https://pablo2611.github.io/pablo2611/) |
 
-<p align="center"><sub>Telegram · Python · APIs de IA · n8n · Linux / VPS · React / Three.js</sub></p>
+<p align="center"><a href="https://pablo2611.github.io/pablo2611/">Abrir las cards en pantalla completa ↗</a></p>
 
 <details>
 <summary><strong>Ver el stack y el enfoque</strong></summary>

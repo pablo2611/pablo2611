@@ -13,6 +13,16 @@
   --coral: #ee9874;
   --ease-out: cubic-bezier(.22, 1, .36, 1);
 }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.dashboard-intro { margin:36px 0 32px; }
+.dashboard-intro img { display:block; width:100%; height:auto; }
+.dashboard-section h2 { font-size:21px; letter-spacing:-.025em; margin:0 0 20px; }
+.dashboard-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.dashboard-grid a { display:flex; border-radius:16px; transition:transform .2s var(--ease-out); }
+.dashboard-grid img { display:block; width:100%; height:auto; align-self:flex-start; }
+.dashboard-source { color:var(--muted); font-size:12px; line-height:1.7; margin:18px 0 0; }
+@media(hover:hover) and (pointer:fine) { .dashboard-grid a:hover { transform:translateY(-3px); } }
+@media(max-width:650px) { .dashboard-grid { grid-template-columns:1fr; } .dashboard-intro { margin-top:26px; } }
 
 * { box-sizing: border-box; }
 html { background: var(--ground); scroll-behavior: smooth; }
