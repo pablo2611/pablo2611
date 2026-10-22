@@ -35,6 +35,12 @@ const skills = svg(`<text x="26" y="32" class="title">De la interacción a la op
 const hero = svg(`<path d="M28 54H852" stroke="#2a3d51"/><text x="28" y="32" class="muted">pablo2611 / ingeniería de software</text><circle cx="846" cy="27" r="4" fill="#8dd8b5" class="spark"/><text x="34" y="111" style="font-size:43px;font-weight:700;letter-spacing:-1.5px">Pablo <tspan fill="#79caff" style="fill:#79caff">Sánchez</tspan></text><text x="36" y="149" style="font-size:17px;fill:#c9d7e6">Ideas conectadas. Sistemas que responden.</text><text x="36" y="193" class="muted">Panamá · Python · Linux / VPS · experiencias web</text><g transform="translate(390 21)"><g class="orbit"><ellipse cx="348" cy="96" rx="70" ry="43" fill="none" stroke="#77caff" stroke-width="1.5"/><circle cx="418" cy="96" r="6" fill="#77caff"/></g><g class="orbit-back"><ellipse cx="348" cy="96" rx="78" ry="66" fill="none" stroke="#b6a1ff" stroke-dasharray="3 8"/><circle cx="270" cy="96" r="4" fill="#b6a1ff"/></g><g class="float"><path d="m326 80-17 16 17 16m44-32 17 16-17 16m-16-38-12 36" stroke="#d6eeff" stroke-width="4" stroke-linecap="round" fill="none"/></g></g>`,880,230,'Pablo Sánchez — ingeniería de software desde Panamá');
 await mkdir('assets',{recursive:true});
 for (const [name,markup] of Object.entries({hero,stats,languages:language,activity,skills})) await writeFile(`assets/dashboard-${name}.svg`,markup);
+const tiles = [stats,language,activity,skills];
+const tileAt = (markup,x,y) => markup.replace('<svg ',`<svg x="${x}" y="${y}" `);
+const grid = `<svg xmlns="http://www.w3.org/2000/svg" width="896" height="486" viewBox="0 0 896 486" role="img"><title>Dashboard de Pablo Sánchez: actividad, lenguajes y especialidades</title>${tiles.map((tile,i)=>tileAt(tile,(i%2)*456,Math.floor(i/2)*256)).join('')}</svg>`;
+const mobile = `<svg xmlns="http://www.w3.org/2000/svg" width="440" height="978" viewBox="0 0 440 978" role="img"><title>Dashboard de Pablo Sánchez en formato móvil</title>${tiles.map((tile,i)=>tileAt(tile,0,i===0?0:i===1?246:i===2?502:748)).join('')}</svg>`;
+await writeFile('assets/dashboard-grid.svg',grid);
+await writeFile('assets/dashboard-mobile.svg',mobile);
 await mkdir('showcase/public/dashboard',{recursive:true});
 for (const [name,markup] of Object.entries({hero,stats,languages:language,activity,skills})) await writeFile(`showcase/public/dashboard/${name}.svg`,markup);
 console.log(`Rendered dashboard from GitHub: ${calendar.totalContributions} contributions, ${repos.length} repositories`);

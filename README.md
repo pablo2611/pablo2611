@@ -10,10 +10,10 @@
 
 ## Ingeniería en movimiento
 
-| Actividad real | Lenguajes |
-| :--- | :--- |
-| [![Actividad de GitHub](assets/dashboard-stats.svg)](https://github.com/pablo2611?tab=overview) | [![Lenguajes de repositorios propios](assets/dashboard-languages.svg)](https://github.com/pablo2611?tab=repositories) |
-| [![Actividad del último mes](assets/dashboard-activity.svg)](https://github.com/pablo2611?tab=overview) | [![Bots, IA, servidores y web](assets/dashboard-skills.svg)](https://pablo2611.github.io/pablo2611/) |
+<a href="https://pablo2611.github.io/pablo2611/"><picture>
+  <source media="(max-width: 650px)" srcset="assets/dashboard-mobile.svg" />
+  <img src="assets/dashboard-grid.svg" width="100%" alt="Dashboard animado: contribuciones reales, repositorios, lenguajes, actividad del último mes y especialidades en bots, IA, servidores y web." />
+</picture></a>
 
 <p align="center"><a href="https://pablo2611.github.io/pablo2611/">Abrir las cards en pantalla completa ↗</a></p>
 
