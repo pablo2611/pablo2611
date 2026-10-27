@@ -28,6 +28,10 @@
 | **APIs de IA** | Contexto, herramientas e integración con servicios externos. |
 | **Flujos / n8n** | Eventos, webhooks y automatización entre aplicaciones. |
 | **Web interactiva** | React, TypeScript y Three.js; diseño, movimiento y rendimiento. |
+| **[VerbaLoop](https://github.com/pablo2611/verbaloop)** | Práctica bilingüe de vocabulario con retos, glosario y guía de aprendizaje. |
+| **[ServerDock](https://github.com/pablo2611/serverdock)** | Prototipo bilingüe de panel para VPS con TypeScript y FastAPI. |
+| **[IG · Quién no me sigue](https://github.com/pablo2611/ig-no-me-siguen)** | Extensión para revisar conexiones y comparar exportaciones locales de Instagram. |
+| **[YTDownloader](https://github.com/pablo2611/ytdownloader)** | Herramienta Python de línea de comandos para descargar vídeo o extraer audio. |
 
 </details>
 
