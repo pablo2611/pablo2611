@@ -67,7 +67,9 @@ ${mobileLabels.join("")}<text x="10" y="158" class="label">L</text><text x="10" 
 </svg>`;
 await writeFile(output.replace(/\.svg$/, "-mobile.svg"), animateSvg(mobile, mobileWeeks.length*12));
 const readme = await readFile("README.md","utf8");
-const next = readme.replace(/(https:\/\/raw\.githubusercontent\.com\/pablo2611\/pablo2611\/main\/assets\/activity-heatmap(?:-mobile)?\.svg)(?:\?v=\d+)?/g,`$1?v=${Date.now()}`);
+const version = Date.now();
+const next = readme.replace(/(https:\/\/raw\.githubusercontent\.com\/pablo2611\/pablo2611\/main\/assets\/activity-heatmap(?:-mobile)?\.svg)(?:\?v=\d+)?/g,`$1?v=${version}`)
+  .replace(/(assets\/dashboard-(?:grid|mobile)\.svg)(?:\?v=\d+)?/g, `$1?v=${version}`);
 if (next !== readme) await writeFile("README.md",next);
 
 function bars(x,y) {
