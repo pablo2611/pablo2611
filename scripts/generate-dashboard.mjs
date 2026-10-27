@@ -1,4 +1,5 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 const source = JSON.parse((await readFile(process.argv[2] || 'dashboard-data.json', 'utf8')).replace(/^\uFEFF/, ''));
 const user = source.data?.user;
@@ -41,6 +42,16 @@ const grid = `<svg xmlns="http://www.w3.org/2000/svg" width="896" height="486" v
 const mobile = `<svg xmlns="http://www.w3.org/2000/svg" width="440" height="978" viewBox="0 0 440 978" role="img"><title>Dashboard de Pablo Sánchez en formato móvil</title>${tiles.map((tile,i)=>tileAt(tile,0,i===0?0:i===1?246:i===2?502:748)).join('')}</svg>`;
 await writeFile('assets/dashboard-grid.svg',grid);
 await writeFile('assets/dashboard-mobile.svg',mobile);
+// A content-addressed filename prevents GitHub and browser caches from serving an older card.
+const gridHash = createHash('sha256').update(grid).digest('hex').slice(0, 12);
+const mobileHash = createHash('sha256').update(mobile).digest('hex').slice(0, 12);
+await writeFile(`assets/dashboard-grid-${gridHash}.svg`, grid);
+await writeFile(`assets/dashboard-mobile-${mobileHash}.svg`, mobile);
+const readme = await readFile('README.md', 'utf8');
+const nextReadme = readme
+  .replace(/(?:https:\/\/raw\.githubusercontent\.com\/pablo2611\/pablo2611\/main\/)?assets\/dashboard-grid(?:-[a-f0-9]{12})?\.svg(?:\?v=\d+)?/g, `https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-grid-${gridHash}.svg`)
+  .replace(/(?:https:\/\/raw\.githubusercontent\.com\/pablo2611\/pablo2611\/main\/)?assets\/dashboard-mobile(?:-[a-f0-9]{12})?\.svg(?:\?v=\d+)?/g, `https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-mobile-${mobileHash}.svg`);
+if (nextReadme !== readme) await writeFile('README.md', nextReadme);
 await mkdir('showcase/public/dashboard',{recursive:true});
 for (const [name,markup] of Object.entries({hero,stats,languages:language,activity,skills})) await writeFile(`showcase/public/dashboard/${name}.svg`,markup);
 console.log(`Rendered dashboard from GitHub: ${calendar.totalContributions} contributions, ${repos.length} repositories`);
