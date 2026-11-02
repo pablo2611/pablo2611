@@ -39,8 +39,8 @@
 
 <div align="center">
   <a href="https://github.com/pablo2611?tab=overview"><picture>
-    <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap-mobile.svg?v=1793599319748" />
-    <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1793599319748" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" />
+    <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap-mobile.svg?v=1793634690341" />
+    <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1793634690341" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" />
   </picture></a>
 </div>
 
