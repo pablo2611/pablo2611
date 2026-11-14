@@ -50,7 +50,7 @@
 
 Panel educativo de ciberseguridad defensiva de Pablo Sánchez. Explora reportes públicos y herramientas de análisis.
 
-[Abrir AETHER OS / Open AETHER OS](https://aether-os-pablo2611.vercel.app/) · [Página del proyecto / Project page](https://pablo2611.github.io/pablo2611/aether-os/) · [Código y README / Source and README](projects/aether-os)
+[Página del proyecto / Project page](https://pablo2611.github.io/pablo2611/aether-os/) · [Código y README / Source and README](projects/aether-os)
 
 ## Experiencias interactivas
 
