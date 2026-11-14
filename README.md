@@ -46,12 +46,6 @@
 
 <br />
 
-## AETHER OS
-
-Panel educativo de ciberseguridad defensiva de Pablo Sánchez. Explora reportes públicos y herramientas de análisis.
-
-[Página del proyecto / Project page](https://pablo2611.github.io/pablo2611/aether-os/) · [Código y README / Source and README](projects/aether-os)
-
 ## Experiencias interactivas
 
 <p align="center">
@@ -72,3 +66,4 @@ Panel educativo de ciberseguridad defensiva de Pablo Sánchez. Explora reportes 
 <div align="center">
   <sub>Actividad real obtenida de GitHub. La tarjeta se actualiza cada seis horas; GitHub puede tardar en contabilizar los commits recientes.</sub>
 </div>
+
