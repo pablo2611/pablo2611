@@ -1,6 +1,7 @@
 import { ArrowUpRight, Github, MapPin } from 'lucide-react';
 
 const projects = [
+  { name: 'AETHER OS', type: 'Ciberseguridad defensiva', href: '/pablo2611/aether-os/' },
   { name: 'ServerDock', type: 'Infraestructura y servicios', href: 'https://github.com/pablo2611/serverdock' },
   { name: 'AERION', type: 'Experiencia automotriz 3D', href: 'https://pablo2611.github.io/aerion/' },
   { name: 'Otro Plano', type: 'Diseño y exploración visual', href: 'https://pablo2611.github.io/otro-plano/' },
