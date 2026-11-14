@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Pablo Sánchez', url: 'https://github.com/pablo2611' }],
 };
 
+const app = 'https://aether-os-pablo2611.vercel.app/';
 const source = 'https://github.com/pablo2611/pablo2611/tree/main/projects/aether-os';
 
 export default function AetherProject() {
@@ -19,6 +20,7 @@ export default function AetherProject() {
         <p>Proyecto de Pablo Sánchez · @pablo2611</p>
         <h1>AETHER OS</h1>
         <p>Panel educativo de ciberseguridad defensiva con datos públicos.</p>
+        <p><a className="github-link" href={app}>Abrir el panel / Open the dashboard</a></p>
         <nav aria-label="Idioma"><a href="#espanol">Español</a> · <a href="#english">English</a></nav>
       </header>
       <section id="espanol" className="projects" aria-labelledby="titulo-es">

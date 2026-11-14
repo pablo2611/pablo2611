@@ -2,7 +2,7 @@
 
 **Pablo Sánchez** · [@pablo2611](https://github.com/pablo2611)
 
-[Página del proyecto / Project page](https://pablo2611.github.io/pablo2611/aether-os/) · [Español](#español) · [English](#english)
+[Abrir AETHER OS / Open AETHER OS](https://aether-os-pablo2611.vercel.app/) · [Página del proyecto / Project page](https://pablo2611.github.io/pablo2611/aether-os/) · [Español](#español) · [English](#english)
 
 ## Español
 
