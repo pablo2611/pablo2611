@@ -49,13 +49,14 @@
 ## Experiencias interactivas
 
 <p align="center">
-  <a href="https://pablo2611.github.io/aerion/"><img src="assets/aerion-card.svg" alt="AERION — conducir la demo 3D con color y sonido" width="330" /></a>
-  <a href="https://pablo2611.github.io/otro-plano/"><img src="assets/otro-plano-card.svg" alt="Otro Plano — explorar diseño, escultura 3D y cine" width="330" /></a>
+  <a href="https://pablo2611.github.io/aerion/"><img src="assets/aerion-card.svg" alt="Abrir la demo de AERION, una experiencia de conducción 3D" width="330" /></a>
+  <a href="https://pablo2611.github.io/otro-plano/"><img src="assets/otro-plano-card.svg" alt="Abrir la demo de Otro Plano, una experiencia de escultura digital y cine" width="330" /></a>
 </p>
 
 <p align="center">
-  <a href="https://pablo2611.github.io/aerion/">Conducir AERION ↗</a> · <a href="https://github.com/pablo2611/aerion">Código de AERION</a><br />
-  <a href="https://pablo2611.github.io/otro-plano/">Explorar Otro Plano ↗</a> · <a href="https://github.com/pablo2611/otro-plano">Código de Otro Plano</a>
+  <a href="https://github.com/pablo2611/aerion">Código de AERION</a>
+  ·
+  <a href="https://github.com/pablo2611/otro-plano">Código de Otro Plano</a>
 </p>
 
 ---

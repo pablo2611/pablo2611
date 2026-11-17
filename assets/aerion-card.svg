@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="380" height="184" viewBox="0 0 380 184" role="img" aria-labelledby="title desc"><title id="title">AERION — abrir demo</title><desc id="desc">Un gran turismo para explorar. 3D / COLOR / SONIDO</desc><rect x="1" y="1" width="378" height="182" rx="16" fill="#0b1720" stroke="#a5beca" stroke-opacity=".35"/><path d="M280 24 L242 160 M316 24 L354 160" stroke="#294552" stroke-width="2"/><path d="M298 30 L298 47 M298 60 L298 78 M298 92 L298 112 M298 128 L298 151" stroke="#67e5ef" stroke-width="2"/><g transform="translate(276 67)"><rect width="44" height="66" rx="17" fill="#67e5ef"/><path d="M7 16 Q22 8 37 16 L34 30 H10Z" fill="#15303f"/><rect x="9" y="43" width="26" height="10" rx="3" fill="#15303f"/><path d="M5 8h7m20 0h7" stroke="white" stroke-width="3"/></g><g font-family="Arial, Helvetica, sans-serif"><text x="24" y="32" font-size="10" letter-spacing="2" fill="#a5beca">EXPERIENCIA INTERACTIVA</text><text x="24" y="76" font-size="29" font-weight="700" fill="#edfaff">AERION</text><text x="24" y="101" font-size="13" fill="#a5beca">Un gran turismo para explorar.</text><text x="24" y="126" font-size="10" letter-spacing="1" fill="#a5beca">3D / COLOR / SONIDO</text><path d="M24 142H356" stroke="#a5beca" stroke-opacity=".25"/><text x="24" y="166" font-size="11" font-weight="700" letter-spacing="1.5" fill="#67e5ef">CONDUCIR LA DEMO</text><text x="340" y="168" font-size="22" fill="#67e5ef">↗</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="218" viewBox="0 0 400 218" role="img" aria-labelledby="title">
+  <title id="title">AERION — Experiencia de conducción 3D</title>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#0a1520"/>
+      <stop offset="1" stop-color="#162d3e"/>
+    </linearGradient>
+    <linearGradient id="body" x2="1" y2="1">
+      <stop stop-color="#d6f7ff"/>
+      <stop offset=".57" stop-color="#68d4ed"/>
+      <stop offset="1" stop-color="#2389aa"/>
+    </linearGradient>
+    <clipPath id="frame"><rect x="1" y="1" width="398" height="216" rx="18"/></clipPath>
+  </defs>
+  <rect x="1" y="1" width="398" height="216" rx="18" fill="url(#background)" stroke="#365363"/>
+  <g clip-path="url(#frame)" fill="none">
+    <path d="M325-12 237 232M398-12 310 232M462-12 374 232" stroke="#365b6b" stroke-width="2"/>
+    <path d="M358-4 271 230" stroke="#67d9ed" stroke-opacity=".55" stroke-width="2" stroke-dasharray="12 15"/>
+    <g transform="translate(314 105) rotate(20)">
+      <path d="M-22-34h10m24 0h10m-44 67h10m24 0h10" stroke="#050b12" stroke-width="8" stroke-linecap="round"/>
+      <path d="M-18-42Q0-53 18-42L22-20V32Q22 48 0 48Q-22 48-22 32V-20Z" fill="url(#body)" stroke="#d1f5ff"/>
+      <path d="M-15-19Q0-27 15-19L12-6H-12ZM-12 19H12L15 29Q0 34-15 29Z" fill="#162f40"/>
+      <path d="M-15-36h7m16 0h7" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-15 39h7m16 0h7" stroke="#082e42" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="24" y="43" fill="#a6dded" font-size="12" font-weight="700" letter-spacing="1.6">CONDUCCIÓN 3D</text>
+    <text x="22" y="101" fill="#f2faff" font-size="44" font-weight="700" letter-spacing="-1">AERION</text>
+    <text x="24" y="128" fill="#bed0dd" font-size="14">Personalización y sonido</text>
+    <rect x="24" y="157" width="117" height="34" rx="17" fill="#133647" stroke="#3d788b"/>
+    <text x="82.5" y="179" fill="#c3f5ff" font-size="13" font-weight="700" text-anchor="middle">Abrir demo</text>
+  </g>
+</svg>
