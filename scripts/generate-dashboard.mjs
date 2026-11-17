@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, unlink } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 
 const source = JSON.parse((await readFile(process.argv[2] || 'dashboard-data.json', 'utf8')).replace(/^\uFEFF/, ''));
@@ -49,6 +49,7 @@ const gridHash = createHash('sha256').update(grid).digest('hex').slice(0, 12);
 const mobileHash = createHash('sha256').update(mobile).digest('hex').slice(0, 12);
 await writeFile(`assets/dashboard-grid-${gridHash}.svg`, grid);
 await writeFile(`assets/dashboard-mobile-${mobileHash}.svg`, mobile);
+for (const file of await readdir('assets')) if (/^dashboard-(grid|mobile)-[a-f0-9]{12}\.svg$/.test(file) && ![`dashboard-grid-${gridHash}.svg`,`dashboard-mobile-${mobileHash}.svg`].includes(file)) await unlink(`assets/${file}`);
 const readme = await readFile('README.md', 'utf8');
 const nextReadme = readme
   .replace(/(?:https:\/\/raw\.githubusercontent\.com\/pablo2611\/pablo2611\/main\/)?assets\/dashboard-grid(?:-[a-f0-9]{12})?\.svg(?:\?v=\d+)?/g, `https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-grid-${gridHash}.svg`)
