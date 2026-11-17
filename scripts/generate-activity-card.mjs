@@ -11,7 +11,8 @@ const recent = count => days.filter(day => (Date.parse(latest) - Date.parse(day.
 const activeDays = days.filter(day => day.contributionCount > 0).length;
 const updated = new Intl.DateTimeFormat("es-PA", {day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"America/Panama"}).format(new Date());
 const escape = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&apos;"})[char]);
-const colors = {NONE:"#242331",FIRST_QUARTILE:"#554c9c",SECOND_QUARTILE:"#7468da",THIRD_QUARTILE:"#9589ff",FOURTH_QUARTILE:"#c3bcff"};
+// Misma paleta azul que el dashboard y las tarjetas del perfil.
+const colors = {NONE:"#162231",FIRST_QUARTILE:"#1d4466",SECOND_QUARTILE:"#2b6699",THIRD_QUARTILE:"#4a93cf",FOURTH_QUARTILE:"#9bd6ff"};
 const step = 12, x = 85, y = 108;
 const labels = [];
 let lastMonth = "", lastColumn = -99;
@@ -24,18 +25,18 @@ for (let i = 0; i < weeks.length; i++) {
     lastMonth = month; lastColumn = i;
   }
 }
-const squares = weeks.flatMap((week,col) => week.contributionDays.map(day => `<rect x="${x+col*step}" y="${y+day.weekday*step}" width="9" height="9" rx="2.5" class="${day.contributionCount ? "pulse" : ""}" style="animation-delay:${(col%7)*.19}s" fill="${colors[day.contributionLevel] ?? colors.NONE}"${day.date===latest?' stroke="#e1dcff" stroke-width="1.5"':''}><title>${day.contributionCount} contribuciones / ${day.date}</title></rect>`)).join("");
+const squares = weeks.flatMap((week,col) => week.contributionDays.map(day => `<rect x="${x+col*step}" y="${y+day.weekday*step}" width="9" height="9" rx="2.5" class="${day.contributionCount ? "pulse" : ""}" style="animation-delay:${(col%7)*.19}s" fill="${colors[day.contributionLevel] ?? colors.NONE}"><title>${day.contributionCount} contribuciones / ${day.date}</title></rect>`)).join("");
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="760" height="278" viewBox="0 0 760 278" role="img" aria-labelledby="title description">
 <title id="title">Actividad en GitHub</title><desc id="description">Contribuciones reales de Pablo S\u00e1nchez. Fuente GitHub API. Actualizaci\u00f3n cada seis horas.</desc>
-<defs><linearGradient id="surface" x2="1" y2="1"><stop stop-color="#161326"/><stop offset="1" stop-color="#0d0e18"/></linearGradient><style>.label{fill:#aaa5bd;font:11px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.small{fill:#aaa5bd;font:12px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.strong{fill:#fff;font:700 18px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}</style></defs>
-<rect x=".5" y=".5" width="759" height="277" rx="22" fill="url(#surface)" stroke="#ffffff" stroke-opacity=".14"/>
-<rect x="28" y="27" width="38" height="38" rx="10" fill="#7c6cff" fill-opacity=".18" stroke="#ffffff" stroke-opacity=".14"/>
+<defs><style>.label{fill:#a3b3c4;font:11px Arial,Helvetica,sans-serif}.small{fill:#a3b3c4;font:12px Arial,Helvetica,sans-serif}.strong{fill:#edf3f8;font:700 18px Arial,Helvetica,sans-serif}</style></defs>
+<rect x=".5" y=".5" width="759" height="277" rx="16" fill="#0c1420" stroke="#28394c"/>
+<rect x="28" y="27" width="38" height="38" rx="10" fill="#79caff" fill-opacity=".1" stroke="#28394c"/>
 ${bars(40,53)}
 <text x="80" y="43" class="strong">Actividad en GitHub</text><text x="80" y="64" class="small">Actualizado: ${escape(updated)} / Panam\u00e1</text>
 <text x="710" y="44" text-anchor="end" class="strong" style="font-size:30px">${calendar.totalContributions}</text><text x="710" y="64" text-anchor="end" class="small">contribuciones / \u00faltimos 12 meses</text>
 <text x="53" y="127" class="label">Lun</text><text x="53" y="151" class="label">Mi\u00e9</text><text x="53" y="175" class="label">Vie</text>
-${labels.join("")}<g>${squares}</g>${scanner(x,y,weeks.length*step,81)}
-<path d="M28 209H732" stroke="#ffffff" stroke-opacity=".1"/>
+${labels.join("")}<g>${squares}</g>
+<path d="M28 209H732" stroke="#28394c"/>
 <text x="32" y="234" class="strong">${recent(7)}</text><text x="68" y="234" class="small">\u00faltimos 7 d\u00edas</text>
 <text x="228" y="234" class="strong">${recent(30)}</text><text x="264" y="234" class="small">\u00faltimos 30 d\u00edas</text>
 <text x="440" y="234" class="strong">${activeDays}</text><text x="476" y="234" class="small">d\u00edas activos / a\u00f1o</text>
@@ -50,16 +51,16 @@ mobileWeeks.forEach((week,col) => {
   const month = new Date(`${week.firstDay}T00:00:00Z`).toLocaleString("es",{month:"short",timeZone:"UTC"});
   if (month !== mobileMonth && col > 0) { mobileLabels.push(`<text x="${38+col*12}" y="124" class="label">${escape(month)}</text>`); mobileMonth=month; }
 });
-const mobileSquares = mobileWeeks.flatMap((week,col)=>week.contributionDays.map(day=>`<rect x="${38+col*12}" y="${139+day.weekday*12}" width="9" height="9" rx="2.5" class="${day.contributionCount?'pulse':''}" style="animation-delay:${(col%7)*.19}s" fill="${colors[day.contributionLevel]??colors.NONE}"${day.date===latest?' stroke="#e1dcff" stroke-width="1.5"':''}><title>${day.contributionCount} contribuciones / ${day.date}</title></rect>`)).join("");
+const mobileSquares = mobileWeeks.flatMap((week,col)=>week.contributionDays.map(day=>`<rect x="${38+col*12}" y="${139+day.weekday*12}" width="9" height="9" rx="2.5" class="${day.contributionCount?'pulse':''}" style="animation-delay:${(col%7)*.19}s" fill="${colors[day.contributionLevel]??colors.NONE}"><title>${day.contributionCount} contribuciones / ${day.date}</title></rect>`)).join("");
 const mobile = `<svg xmlns="http://www.w3.org/2000/svg" width="380" height="350" viewBox="0 0 380 350" role="img" aria-labelledby="title description">
 <title id="title">Actividad en GitHub</title><desc id="description">${calendar.totalContributions} contribuciones en doce meses. Calendario de las 26 semanas más recientes.</desc>
-<defs><linearGradient id="surface" x2="1" y2="1"><stop stop-color="#161326"/><stop offset="1" stop-color="#0d0e18"/></linearGradient><style>.label{fill:#aaa5bd;font:11px Arial,sans-serif}.small{fill:#aaa5bd;font:12px Arial,sans-serif}.strong{fill:#fff;font:700 18px Arial,sans-serif}</style></defs>
-<rect x=".5" y=".5" width="379" height="349" rx="20" fill="url(#surface)" stroke="#ffffff" stroke-opacity=".14"/>
+<defs><style>.label{fill:#a3b3c4;font:11px Arial,sans-serif}.small{fill:#a3b3c4;font:12px Arial,sans-serif}.strong{fill:#edf3f8;font:700 18px Arial,sans-serif}</style></defs>
+<rect x=".5" y=".5" width="379" height="349" rx="16" fill="#0c1420" stroke="#28394c"/>
 ${bars(24,47)}<text x="62" y="40" class="strong">Actividad en GitHub</text><text x="352" y="40" text-anchor="end" class="strong" style="font-size:26px">${calendar.totalContributions}</text>
 <text x="352" y="60" text-anchor="end" class="small">contribuciones / 12 meses</text>
 <text x="24" y="83" class="small">Actualizado: ${escape(updated)} / Panamá</text><text x="24" y="106" class="small">Calendario / últimos 6 meses</text>
-${mobileLabels.join("")}<text x="10" y="158" class="label">L</text><text x="10" y="182" class="label">M</text><text x="10" y="206" class="label">V</text><g>${mobileSquares}</g>${scanner(38,139,mobileWeeks.length*12,81)}
-<path d="M24 237H356" stroke="#ffffff" stroke-opacity=".1"/>
+${mobileLabels.join("")}<text x="10" y="158" class="label">L</text><text x="10" y="182" class="label">M</text><text x="10" y="206" class="label">V</text><g>${mobileSquares}</g>
+<path d="M24 237H356" stroke="#28394c"/>
 <text x="24" y="266" class="strong" style="font-size:24px">${recent(7)}</text><text x="24" y="285" class="small">7 días</text>
 <text x="143" y="266" class="strong" style="font-size:24px">${recent(30)}</text><text x="143" y="285" class="small">30 días</text>
 <text x="262" y="266" class="strong" style="font-size:24px">${activeDays}</text><text x="262" y="285" class="small">días activos/año</text>
@@ -73,7 +74,7 @@ const next = readme.replace(/(https:\/\/raw\.githubusercontent\.com\/pablo2611\/
 if (next !== readme) await writeFile("README.md",next);
 
 function bars(x,y) {
-  return [12,22,16,19].map((height,i)=>`<rect class="bar" x="${x+i*7}" y="${y-height}" width="3" height="${height}" rx="1.5" fill="#c3bcff" style="animation-delay:${i*.22}s"/>`).join("");
+  return [12,22,16,19].map((height,i)=>`<rect class="bar" x="${x+i*7}" y="${y-height}" width="3" height="${height}" rx="1.5" fill="#79caff" style="animation-delay:${i*.22}s"/>`).join("");
 }
 function scanner(x,y,width,height) {
   return `<defs><clipPath id="gridClip"><rect x="${x}" y="${y}" width="${width}" height="${height}"/></clipPath><linearGradient id="scanLight"><stop stop-color="#c3bcff" stop-opacity="0"/><stop offset="1" stop-color="#c3bcff" stop-opacity=".22"/></linearGradient></defs><g clip-path="url(#gridClip)" aria-hidden="true"><g class="scan"><rect x="${x-28}" y="${y}" width="28" height="${height}" fill="url(#scanLight)"/><path d="M${x} ${y}v${height}" stroke="#d5ceff" stroke-width="1.5" stroke-opacity=".65"/></g></g>`;

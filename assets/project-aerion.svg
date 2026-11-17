@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="436" height="230" viewBox="0 0 436 230" role="img" aria-labelledby="t d">
+  <title id="t">AERION · Conducción 3D</title>
+  <desc id="d">Demo web interactiva de conducción 3D con personalización de color y sonido. Abrir demo.</desc>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .muted{fill:#a3b3c4;font-size:12px}
+    .spark{animation:spark 2.8s ease-in-out infinite alternate}
+    .coupe{transform-origin:302px 108px;animation:approach 5s cubic-bezier(.77,0,.175,1) infinite}
+    .speed{animation:wind 1.2s linear infinite}
+    .lane{animation:lane 1.4s linear infinite}
+    @keyframes spark{to{opacity:.35}}
+    @keyframes approach{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.05)}}
+    @keyframes wind{0%{transform:translateY(-12px);opacity:0}40%{opacity:.9}100%{transform:translateY(16px);opacity:0}}
+    @keyframes lane{to{stroke-dashoffset:-24}}
+    @media(prefers-reduced-motion:reduce){.spark,.coupe,.speed,.lane{animation:none}}
+  </style>
+  <defs>
+    <radialGradient id="halo"><stop stop-color="#79caff" stop-opacity=".22"/><stop offset="1" stop-color="#79caff" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0H0v14" fill="none" stroke="#79caff" stroke-opacity=".06"/></pattern>
+    <clipPath id="panel"><rect x="252" y="68" width="160" height="138" rx="12"/></clipPath>
+  </defs>
+
+  <rect x=".5" y=".5" width="435" height="229" rx="16" fill="#0c1420" stroke="#28394c"/>
+  <text x="24" y="32" class="muted">01 · conducción 3d</text>
+  <circle cx="363" cy="28" r="4" fill="#79caff" class="spark"/>
+  <text x="412" y="32" class="muted" text-anchor="end">en vivo</text>
+  <path d="M24 50H412" stroke="#2a3d51"/>
+
+  <text x="24" y="116" fill="#edf3f8" style="font-size:34px;font-weight:700;letter-spacing:-1.2px">AERION</text>
+  <text x="24" y="142" fill="#c9d7e6" style="font-size:14px">Personalización, color y sonido</text>
+  <text x="24" y="196" class="muted">Experiencia web 3D · toca para abrir</text>
+
+
+  <g aria-hidden="true" clip-path="url(#panel)">
+    <rect x="252" y="68" width="160" height="138" fill="#0f1a28"/>
+    <rect x="252" y="68" width="160" height="138" fill="url(#grid)"/>
+    <ellipse cx="332" cy="132" rx="78" ry="70" fill="url(#halo)"/>
+    <path d="M262 190h140M272 200h120" stroke="#79caff" stroke-opacity=".18"/>
+    <path class="lane" d="M332 150v56" stroke="#79caff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="8 4"/>
+    <path d="M300 160l-26 46m90-46 26 46" stroke="#79caff" stroke-opacity=".18"/>
+    <g transform="translate(30 22)">
+      <g class="speed" fill="none" stroke="#79caff" stroke-width="2" stroke-linecap="round" opacity=".7">
+        <path d="M232 100h14m-17 13h12m108-13h12m-10 13h14"/>
+      </g>
+      <g class="coupe" stroke-linejoin="round">
+        <path d="M256 107l12-28q2-5 9-6h50q7 1 9 6l12 28m-84 23v8h10l4-8m48 0 4 8h10v-8" fill="#12263a" stroke="#8ccfff" stroke-width="2"/>
+        <path d="M278 80h48l9 19h-66z" fill="#1d4466" stroke="#6fb6e6" stroke-width="1.5"/>
+        <path d="M244 113l13-13h90l13 13v12q0 6-6 6H250q-6 0-6-6z" fill="#153249" stroke="#cde9ff" stroke-width="2.2"/>
+        <path d="M261 109l18 5m64-5-18 5" fill="none" stroke="#d6eeff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M285 119h34l-5 6h-24z" fill="#0a1622" stroke="#4f8fb8"/>
+      </g>
+    </g>
+  </g>
+  <rect x="252.5" y="68.5" width="159" height="137" rx="12" fill="none" stroke="#28394c"/>
+</svg>
