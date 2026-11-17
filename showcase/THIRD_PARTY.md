@@ -5,6 +5,8 @@ This showcase is an original animated dashboard built for Pablo Sánchez's profi
 - **Lucide**, ISC: https://github.com/lucide-icons/lucide. Interface icons.
 - **Manrope**, SIL Open Font License: https://github.com/sharanda/manrope. Self-hosted through Fontsource.
 
+- **SpotlightCard**, React Bits by David Haz. Adapted for the experience gallery. [Component source](https://github.com/DavidHDev/react-bits/tree/main/src/content/Components/SpotlightCard) · [MIT + Commons Clause](licenses/react-bits.txt).
+
 The dashboard SVGs are authored in `scripts/generate-dashboard.mjs`. GitHub contributions and repository language sizes come from the GitHub GraphQL API. Language percentages describe the five largest languages by bytes in public, non-fork repositories owned by the account. The skills diagram is illustrative, not deployment telemetry. CSS animations work inside the SVGs with a reduced-motion fallback; no WebGL or client-side JavaScript is required.
 
 Earlier experimental source adapted from Magic UI remains in this repository but is not imported by the current public route. Its MIT license remains in [licenses/magic-ui.txt](licenses/magic-ui.txt).

@@ -163,3 +163,22 @@ footer a { color: #dce8e0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+.experience-section { margin-top: clamp(56px, 8vw, 96px); scroll-margin-top: 24px; }
+.experience-section h2 { margin: 0 0 20px; font-size: 21px; letter-spacing: -.025em; }
+.experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.experience-card { position: relative; display: flex; flex-direction: column; overflow: hidden; isolation: isolate; border: 1px solid var(--line); border-radius: 16px; background: var(--field); }
+.experience-card > img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+.experience-copy { position: relative; z-index: 1; display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 20px; }
+.experience-copy h3 { margin: 0; font-size: 24px; letter-spacing: -.035em; }
+.experience-copy p { margin: 6px 0 16px; color: var(--muted); font-size: 14px; }
+.experience-actions { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: auto; }
+.experience-actions a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 700; }
+.experience-actions a:first-child { border: 1px solid var(--line-strong); border-radius: 8px; padding-inline: 14px; }
+.experience-actions a:last-child { color: var(--muted); }
+.experience-actions a:hover { color: var(--sky); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .experience-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(220px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), var(--spotlight-color), transparent 75%); transition: opacity .2s; }
+  .experience-card:hover::after { opacity: 1; }
+}
+@media (max-width: 650px) { .experience-grid { grid-template-columns: 1fr; } }

@@ -1,9 +1,20 @@
 import { ArrowUpRight, Github, MapPin } from 'lucide-react';
 
-const projects = [
-  { name: 'ServerDock', type: 'Infraestructura y servicios', href: 'https://github.com/pablo2611/serverdock' },
-  { name: 'AERION', type: 'Experiencia automotriz 3D', href: 'https://pablo2611.github.io/aerion/' },
-  { name: 'Otro Plano', type: 'Diseño y exploración visual', href: 'https://pablo2611.github.io/otro-plano/' },
+import { SpotlightCard } from '../components/spotlight-card';
+
+const experiences = [
+  {
+    id: 'aerion',
+    name: 'AERION',
+    description: 'Conducción 3D, personalización de color y sonido.',
+    spotlight: '#5fc9ef55',
+  },
+  {
+    id: 'otro-plano',
+    name: 'Otro Plano',
+    description: 'Escultura digital, diseño y cine en una experiencia inmersiva.',
+    spotlight: '#ee89b355',
+  },
 ];
 
 export default function Home() {
@@ -35,16 +46,32 @@ export default function Home() {
         <p className="dashboard-source">Datos públicos de GitHub · actualización cada seis horas · lenguajes por tamaño de código en repositorios propios.</p>
       </section>
 
-      <section className="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Trabajo seleccionado</h2>
-        <div>
-          {projects.map((project) => (
-            <a key={project.name} href={project.href}>
-              <strong>{project.name}</strong>
-              <span>{project.type}</span>
-              <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
+      <section id="experiencias" className="experience-section" aria-labelledby="experiences-title">
+        <h2 id="experiences-title">Experiencias interactivas</h2>
+        <div className="experience-grid">
+          {experiences.map(({ id, name, description, spotlight }) => (
+            <SpotlightCard key={id} color={spotlight}>
+              <img src={`/pablo2611/experiencias/${id}.jpg`} alt="" width="1280" height="720" loading="lazy" />
+              <div className="experience-copy">
+                <h3>{name}</h3>
+                <p>{description}</p>
+                <div className="experience-actions">
+                  <a href={`https://pablo2611.github.io/${id}/`} aria-label={`Abrir demo de ${name}`}>Abrir demo</a>
+                  <a href={`https://github.com/pablo2611/${id}`} aria-label={`Ver código de ${name}`}>Ver código</a>
+                </div>
+              </div>
+            </SpotlightCard>
           ))}
+        </div>
+      </section>
+
+      <section className="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Infraestructura</h2>
+        <div>
+          <a href="https://github.com/pablo2611/serverdock">
+            <strong>ServerDock</strong>
+            <span>Infraestructura y servicios</span>
+          </a>
         </div>
       </section>
 
