@@ -1,29 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="218" viewBox="0 0 400 218" role="img" aria-labelledby="title">
-  <title id="title">Otro Plano — Escultura digital y cine</title>
+  <title id="title">Otro Plano · ESCULTURA DIGITAL</title>
   <defs>
-    <linearGradient id="background" x2="1" y2="1">
-      <stop stop-color="#f6efe7"/>
-      <stop offset="1" stop-color="#ecd7d6"/>
+    <linearGradient id="card" x2="1" y2="1">
+      <stop stop-color="#0e141d"/>
+      <stop offset="1" stop-color="#251a30"/>
     </linearGradient>
-    <linearGradient id="sculpture" x2="1" y2="1">
-      <stop stop-color="#ef9f9f"/>
-      <stop offset=".45" stop-color="#ba4766"/>
-      <stop offset="1" stop-color="#5d2647"/>
-    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#ffadc9" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffadc9" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect x="1" y="1" width="398" height="216" rx="18" fill="url(#background)" stroke="#c4a4a9"/>
-  <g transform="translate(314 109) rotate(-28)">
-    <ellipse rx="67" ry="61" fill="none" stroke="#8a3a57" stroke-opacity=".32" stroke-dasharray="2 6"/>
-    <path d="M-57 6C-33-60 42-55 57-16S34 48-4 44-70 35-57 6Z" fill="url(#sculpture)"/>
-    <path d="M-55 7C-31 29 31 25 56-19M-57 7C-33-9 26-33 53-25M-48 36C-7 50 40 24 55 1" fill="none" stroke="#fbd5c8" stroke-opacity=".68" stroke-width="1.2"/>
-    <ellipse rx="73" ry="29" transform="rotate(17)" fill="none" stroke="#78314d" stroke-width="1.3"/>
-    <circle cx="68" cy="20" r="4.5" fill="#78314d"/>
+  <rect x="1" y="1" width="398" height="216" rx="20" fill="url(#card)" stroke="#ffadc9" stroke-opacity=".35"/>
+  <rect x="221" y="17" width="162" height="184" rx="14" fill="#22172c" stroke="#ffadc9" stroke-opacity=".22"/>
+  <g aria-hidden="true">
+    <ellipse cx="302" cy="108" rx="79" ry="79" fill="url(#halo)"/>
+    <circle cx="302" cy="108" r="58" fill="none" stroke="#ffadc9" stroke-opacity=".19" stroke-dasharray="2 5"/>
+    <path d="M243 110h118m-59-59v114" stroke="#ffadc9" stroke-opacity=".16"/>
+    <ellipse cx="302" cy="108" rx="69" ry="24" transform="rotate(-24 302 108)" fill="none" stroke="#ffadc9" stroke-opacity=".34"/>
+    <g class="prism" stroke="#ffc6d9" stroke-width="1.5" stroke-linejoin="round">
+      <path d="M302 61l42 24-5 51-37 24-37-24-5-51z" fill="#331f42"/>
+      <path d="M302 61l42 24-42 24-42-24z" fill="#d783a9"/>
+      <path d="M260 85l42 24v51l-37-24z" fill="#814775"/>
+      <path d="M302 109l42-24-5 51-37 24z" fill="#553460"/>
+      <path d="M302 61l13 31-13 17-13-17zM302 109l17 12-17 39-17-39z" fill="#ffadc9" fill-opacity=".3" stroke-opacity=".65"/>
+    </g>
+    <g class="orbit">
+      <circle cx="357" cy="89" r="4" fill="#ffd9e7"/>
+      <path d="M248 126h8m-4-4v8" stroke="#ffadc9" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
   </g>
   <g font-family="Arial, Helvetica, sans-serif">
-    <text x="24" y="43" fill="#78314d" font-size="12" font-weight="700" letter-spacing="1.6">ESCULTURA DIGITAL</text>
-    <text x="22" y="101" fill="#33232e" font-size="42" font-weight="700" letter-spacing="-1">Otro Plano</text>
-    <text x="24" y="128" fill="#634653" font-size="14">Diseño, 3D y cine</text>
-    <rect x="24" y="157" width="117" height="34" rx="17" fill="#78314d"/>
-    <text x="82.5" y="179" fill="#fff2ef" font-size="13" font-weight="700" text-anchor="middle">Abrir demo</text>
+    <text x="24" y="54" fill="#ffadc9" font-size="12" font-weight="700" letter-spacing="1.15">ESCULTURA DIGITAL</text>
+    <text x="22" y="104" fill="#f5f7fb" font-size="38" font-weight="700" letter-spacing="-1.25">Otro Plano</text>
+    <text x="24" y="131" fill="#c6cfdb" font-size="14">Diseño, 3D y cine</text>
+    <rect x="24" y="157" width="122" height="34" rx="9" fill="#ffadc9"/>
+    <text x="85" y="179" text-anchor="middle" fill="#101624" font-size="13" font-weight="700">Abrir demo</text>
   </g>
 </svg>
