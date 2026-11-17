@@ -15,16 +15,16 @@
 ## Ingeniería en movimiento
 
 <a href="https://pablo2611.github.io/pablo2611/"><picture>
-  <source media="(max-width: 650px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-mobile-ddea6aedb518.svg" />
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-grid-70e1f8bfe82c.svg" width="100%" alt="Dashboard animado: contribuciones reales, repositorios, lenguajes, actividad del último mes y especialidades en bots, IA, servidores y web." />
+  <source media="(max-width: 650px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-mobile-87ed763c00c9.svg" />
+  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-grid-dc765a715ee5.svg" width="100%" alt="Dashboard animado: contribuciones reales, repositorios, lenguajes, actividad del último mes y especialidades en bots, IA, servidores y web." />
 </picture></a>
 
 <br />
 <br />
 
 <a href="https://github.com/pablo2611?tab=overview"><picture>
-  <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap-mobile.svg?v=1794890470878" />
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1794890470878" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" />
+  <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap-mobile.svg?v=1794890527655" />
+  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/activity-heatmap.svg?v=1794890527655" alt="Contribuciones reales en GitHub y resumen de actividad reciente" width="100%" />
 </picture></a>
 
 <img src="assets/divider.svg" width="100%" alt="" />
