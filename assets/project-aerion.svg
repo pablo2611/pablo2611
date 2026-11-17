@@ -22,16 +22,14 @@
 
   <rect x=".5" y=".5" width="435" height="229" rx="16" fill="#0c1420" stroke="#28394c"/>
   <text x="24" y="32" class="muted">01 · conducción 3d</text>
-  <circle cx="363" cy="28" r="4" fill="#8dd8b5" class="spark"/>
+  <circle cx="363" cy="28" r="4" fill="#79caff" class="spark"/>
   <text x="412" y="32" class="muted" text-anchor="end">en vivo</text>
   <path d="M24 50H412" stroke="#2a3d51"/>
 
-  <text x="24" y="102" fill="#edf3f8" style="font-size:34px;font-weight:700;letter-spacing:-1.2px">AERION</text>
-  <text x="24" y="128" fill="#c9d7e6" style="font-size:14px">Personalización, color y sonido</text>
-  <text x="24" y="150" class="muted">Experiencia web 3D</text>
+  <text x="24" y="116" fill="#edf3f8" style="font-size:34px;font-weight:700;letter-spacing:-1.2px">AERION</text>
+  <text x="24" y="142" fill="#c9d7e6" style="font-size:14px">Personalización, color y sonido</text>
+  <text x="24" y="196" class="muted">Experiencia web 3D · toca para abrir</text>
 
-  <rect x="24" y="172" width="126" height="34" rx="17" fill="#79caff" fill-opacity=".12" stroke="#79caff" stroke-opacity=".55"/>
-  <text x="87" y="194" text-anchor="middle" fill="#9bd6ff" style="font-size:13px;font-weight:700">Abrir demo →</text>
 
   <g aria-hidden="true" clip-path="url(#panel)">
     <rect x="252" y="68" width="160" height="138" fill="#0f1a28"/>

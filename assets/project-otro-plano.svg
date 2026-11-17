@@ -13,41 +13,39 @@
     @media(prefers-reduced-motion:reduce){.spark,.prism,.orbit{animation:none}}
   </style>
   <defs>
-    <radialGradient id="halo"><stop stop-color="#b6a1ff" stop-opacity=".24"/><stop offset="1" stop-color="#b6a1ff" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0H0v14" fill="none" stroke="#b6a1ff" stroke-opacity=".06"/></pattern>
+    <radialGradient id="halo"><stop stop-color="#79caff" stop-opacity=".24"/><stop offset="1" stop-color="#79caff" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0H0v14" fill="none" stroke="#79caff" stroke-opacity=".06"/></pattern>
     <clipPath id="panel"><rect x="252" y="68" width="160" height="138" rx="12"/></clipPath>
   </defs>
 
   <rect x=".5" y=".5" width="435" height="229" rx="16" fill="#0c1420" stroke="#28394c"/>
   <text x="24" y="32" class="muted">02 · escultura digital</text>
-  <circle cx="363" cy="28" r="4" fill="#8dd8b5" class="spark"/>
+  <circle cx="363" cy="28" r="4" fill="#79caff" class="spark"/>
   <text x="412" y="32" class="muted" text-anchor="end">en vivo</text>
   <path d="M24 50H412" stroke="#2a3d51"/>
 
-  <text x="24" y="102" fill="#edf3f8" style="font-size:34px;font-weight:700;letter-spacing:-1.2px">Otro Plano</text>
-  <text x="24" y="128" fill="#c9d7e6" style="font-size:14px">Diseño, 3D y cine</text>
-  <text x="24" y="150" class="muted">Experiencia web 3D</text>
+  <text x="24" y="116" fill="#edf3f8" style="font-size:34px;font-weight:700;letter-spacing:-1.2px">Otro Plano</text>
+  <text x="24" y="142" fill="#c9d7e6" style="font-size:14px">Diseño, 3D y cine</text>
+  <text x="24" y="196" class="muted">Experiencia web 3D · toca para abrir</text>
 
-  <rect x="24" y="172" width="126" height="34" rx="17" fill="#b6a1ff" fill-opacity=".12" stroke="#b6a1ff" stroke-opacity=".55"/>
-  <text x="87" y="194" text-anchor="middle" fill="#cbbcff" style="font-size:13px;font-weight:700">Abrir demo →</text>
 
   <g aria-hidden="true" clip-path="url(#panel)">
-    <rect x="252" y="68" width="160" height="138" fill="#12142a"/>
+    <rect x="252" y="68" width="160" height="138" fill="#0f1a28"/>
     <rect x="252" y="68" width="160" height="138" fill="url(#grid)"/>
     <g transform="translate(30 29)">
       <ellipse cx="302" cy="108" rx="78" ry="70" fill="url(#halo)"/>
-      <circle cx="302" cy="108" r="58" fill="none" stroke="#b6a1ff" stroke-opacity=".2" stroke-dasharray="2 5"/>
-      <ellipse cx="302" cy="108" rx="66" ry="22" transform="rotate(-22 302 108)" fill="none" stroke="#b6a1ff" stroke-opacity=".35"/>
-      <g class="prism" stroke="#ddd3ff" stroke-width="1.4" stroke-linejoin="round">
-        <path d="M302 64l40 23-5 48-35 23-35-23-5-48z" fill="#211c40"/>
-        <path d="M302 64l40 23-40 23-40-23z" fill="#b6a1ff"/>
-        <path d="M262 87l40 23v48l-35-23z" fill="#6a58b4"/>
-        <path d="M302 110l40-23-5 48-35 23z" fill="#433780"/>
-        <path d="M302 64l12 29-12 17-12-17zM302 110l16 11-16 37-16-37z" fill="#e6dcff" fill-opacity=".22" stroke-opacity=".6"/>
+      <circle cx="302" cy="108" r="58" fill="none" stroke="#79caff" stroke-opacity=".2" stroke-dasharray="2 5"/>
+      <ellipse cx="302" cy="108" rx="66" ry="22" transform="rotate(-22 302 108)" fill="none" stroke="#79caff" stroke-opacity=".35"/>
+      <g class="prism" stroke="#cde9ff" stroke-width="1.4" stroke-linejoin="round">
+        <path d="M302 64l40 23-5 48-35 23-35-23-5-48z" fill="#12263a"/>
+        <path d="M302 64l40 23-40 23-40-23z" fill="#79caff"/>
+        <path d="M262 87l40 23v48l-35-23z" fill="#2f6fa3"/>
+        <path d="M302 110l40-23-5 48-35 23z" fill="#1d4466"/>
+        <path d="M302 64l12 29-12 17-12-17zM302 110l16 11-16 37-16-37z" fill="#d6eeff" fill-opacity=".22" stroke-opacity=".6"/>
       </g>
       <g class="orbit">
-        <circle cx="362" cy="86" r="4" fill="#e6dcff"/>
-        <path d="M244 128h8m-4-4v8" stroke="#b6a1ff" stroke-width="1.7" stroke-linecap="round"/>
+        <circle cx="362" cy="86" r="4" fill="#d6eeff"/>
+        <path d="M244 128h8m-4-4v8" stroke="#79caff" stroke-width="1.7" stroke-linecap="round"/>
       </g>
     </g>
   </g>

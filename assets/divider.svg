@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="24" viewBox="0 0 880 24" aria-hidden="true">
+  <defs>
+    <linearGradient id="fade" x2="880" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28394c" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#3a5674"/>
+      <stop offset="1" stop-color="#28394c" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glint" x2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79caff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#79caff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#79caff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>.glint{animation:glint 8s linear infinite}@keyframes glint{from{transform:translateX(-160px)}to{transform:translateX(880px)}}@media(prefers-reduced-motion:reduce){.glint{display:none}}</style>
+  <path d="M0 12H426M454 12H880" stroke="url(#fade)"/>
+  <rect class="glint" y="11" width="160" height="2" rx="1" fill="url(#glint)"/>
+  <circle cx="440" cy="12" r="4" fill="#0c1420" stroke="#79caff" stroke-width="1.5"/>
+</svg>
