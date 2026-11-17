@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="218" viewBox="0 0 400 218" role="img" aria-labelledby="title">
+  <title id="title">AERION — Experiencia de conducción 3D</title>
+  <style>
+    .speed { opacity: .25; }
+    @media (prefers-reduced-motion: no-preference) {
+      .speed { animation: road 1.16s linear 4; }
+      .car { animation: drive 4.64s ease-in-out; }
+      .lights { animation: headlights 4.64s ease-in-out; }
+    }
+    @keyframes road {
+      from { transform: translate(9px, -25px); opacity: 0; }
+      30%, 65% { opacity: .85; }
+      to { transform: translate(-18px, 50px); opacity: 0; }
+    }
+    @keyframes drive {
+      0%, 100% { transform: translate(0, 0); }
+      40% { transform: translate(8px, -20px); }
+      70% { transform: translate(-5px, 13px); }
+    }
+    @keyframes headlights {
+      0%, 100% { opacity: .3; }
+      40%, 75% { opacity: .85; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#0a1520"/>
+      <stop offset="1" stop-color="#162d3e"/>
+    </linearGradient>
+    <linearGradient id="body" x2="1" y2="1">
+      <stop stop-color="#d6f7ff"/>
+      <stop offset=".57" stop-color="#68d4ed"/>
+      <stop offset="1" stop-color="#2389aa"/>
+    </linearGradient>
+    <linearGradient id="beam" x2="0" y2="1">
+      <stop stop-color="#6eeaff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#6eeaff" stop-opacity=".42"/>
+    </linearGradient>
+    <clipPath id="frame"><rect x="1" y="1" width="398" height="216" rx="18"/></clipPath>
+  </defs>
+  <rect x="1" y="1" width="398" height="216" rx="18" fill="url(#background)" stroke="#365363"/>
+  <g clip-path="url(#frame)" fill="none">
+    <path d="M325-12 237 232M398-12 310 232M462-12 374 232" stroke="#365b6b" stroke-width="2"/>
+    <path d="M358-4 271 230" stroke="#67d9ed" stroke-opacity=".55" stroke-width="2" stroke-dasharray="12 15"/>
+    <path class="speed" d="M371 21l-10 28m-8 23-15 40m-8 23-12 34m-50-90-12 32m-7 20-11 30m-7 20-10 28" stroke="#7aeaff" stroke-width="2.5" stroke-linecap="round"/>
+    <g class="car">
+      <g transform="translate(314 105) rotate(20)">
+        <path class="lights" d="M-15-37-31-107H-2L-8-37ZM8-37 2-107H31L15-37Z" fill="url(#beam)" opacity=".3"/>
+        <path d="M-22-34h10m24 0h10m-44 67h10m24 0h10" stroke="#050b12" stroke-width="8" stroke-linecap="round"/>
+        <path d="M-18-42Q0-53 18-42L22-20V32Q22 48 0 48Q-22 48-22 32V-20Z" fill="url(#body)" stroke="#d1f5ff"/>
+        <path d="M-15-19Q0-27 15-19L12-6H-12ZM-12 19H12L15 29Q0 34-15 29Z" fill="#162f40"/>
+        <path d="M-15-36h7m16 0h7" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M-15 39h7m16 0h7" stroke="#082e42" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="24" y="43" fill="#a6dded" font-size="12" font-weight="700" letter-spacing="1.6">CONDUCCIÓN 3D</text>
+    <text x="22" y="101" fill="#f2faff" font-size="44" font-weight="700" letter-spacing="-1">AERION</text>
+    <text x="24" y="128" fill="#bed0dd" font-size="14">Personalización y sonido</text>
+    <rect x="24" y="157" width="117" height="34" rx="17" fill="#133647" stroke="#3d788b"/>
+    <text x="82.5" y="179" fill="#c3f5ff" font-size="13" font-weight="700" text-anchor="middle">Abrir demo</text>
+  </g>
+</svg>
