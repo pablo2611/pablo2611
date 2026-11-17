@@ -9,6 +9,7 @@ on:
       - ".github/workflows/update-profile-card.yml"
       - "scripts/generate-activity-card.mjs"
       - "scripts/generate-dashboard.mjs"
+      - "scripts/language-icons.mjs"
 
 permissions:
   contents: write

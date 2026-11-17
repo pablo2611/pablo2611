@@ -15,8 +15,8 @@
 ## Ingeniería en movimiento
 
 <a href="https://pablo2611.github.io/pablo2611/"><picture>
-  <source media="(max-width: 650px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-mobile-87ed763c00c9.svg" />
-  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-grid-dc765a715ee5.svg" width="100%" alt="Dashboard animado: contribuciones reales, repositorios, lenguajes, actividad del último mes y especialidades en bots, IA, servidores y web." />
+  <source media="(max-width: 650px)" srcset="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-mobile-e74bed0b4e0c.svg" />
+  <img src="https://raw.githubusercontent.com/pablo2611/pablo2611/main/assets/dashboard-grid-9904e651e809.svg" width="100%" alt="Dashboard animado: contribuciones reales, repositorios, lenguajes, actividad del último mes y especialidades en bots, IA, servidores y web." />
 </picture></a>
 
 <br />
@@ -32,25 +32,3 @@
 ## Experiencias interactivas
 
 <p align="center"><a href="https://pablo2611.github.io/aerion/"><img src="assets/project-aerion.svg" width="49%" alt="AERION · Conducción 3D — abrir demo" /></a>&nbsp;<a href="https://pablo2611.github.io/otro-plano/"><img src="assets/project-otro-plano.svg" width="49%" alt="Otro Plano · Escultura digital — abrir demo" /></a></p>
-
-<img src="assets/divider.svg" width="100%" alt="" />
-
-## Stack y proyectos
-
-| Área | Enfoque |
-| --- | --- |
-| **Linux / VPS** | SSH, Docker, Nginx; despliegue, logs y monitorización. |
-| **Python** | Backends asíncronos, tareas, colas y procesos persistentes. |
-| **Telegram bots** | Bot API, webhooks, conversaciones, comandos y notificaciones. |
-| **APIs de IA** | Contexto, herramientas e integración con servicios externos. |
-| **Flujos / n8n** | Eventos, webhooks y automatización entre aplicaciones. |
-| **Web interactiva** | React, TypeScript y Three.js; diseño, movimiento y rendimiento. |
-
-| Proyecto | Qué es |
-| --- | --- |
-| **[VerbaLoop](https://github.com/pablo2611/verbaloop)** | Práctica bilingüe de vocabulario con retos, glosario y guía de aprendizaje. |
-| **[ServerDock](https://github.com/pablo2611/serverdock)** | Prototipo bilingüe de panel para VPS con TypeScript y FastAPI. |
-| **[IG · Quién no me sigue](https://github.com/pablo2611/ig-no-me-siguen)** | Extensión para revisar conexiones y comparar exportaciones locales de Instagram. |
-| **[YTDownloader](https://github.com/pablo2611/ytdownloader)** | Herramienta Python de línea de comandos para descargar vídeo o extraer audio. |
-| **[AERION](https://github.com/pablo2611/aerion)** | Demo web de conducción 3D con personalización de color y sonido. |
-| **[Otro Plano](https://github.com/pablo2611/otro-plano)** | Demo web de escultura digital, diseño 3D y cine. |
